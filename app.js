@@ -29,8 +29,8 @@ Your browser does not support the audio element.
 //readme file **
 
 
-//make ghost appear from empty img div (from css .ghostContainer display:none either onclick=start button OR setTimeout from page refresh [and loop?])
 
+//display score in points to top statusBar via innerHTML
 const consoleToScreen = (content)=>{
     let screen = document.querySelector('.playerScores')
     let printer = document.createElement('div')
@@ -41,6 +41,7 @@ const consoleToScreen = (content)=>{
     screen.appendChild(printer);
 }
 
+//make ghost appear from empty img div (from css .ghostContainer display:none either onclick=start button OR setTimeout from page refresh)
 function createGhost() {
     const ghostContainer = document.querySelector('.ghostContainer');
     const ghostImage = document.createElement('img');
@@ -52,20 +53,32 @@ function createGhost() {
     ghostContainer.appendChild(ghostImage);
     
     ghostContainer.style.display = 'flex';
+
+    // beginFloat();
+    // beginFloat2();
+    // beginFloat3();
   }
   
   setTimeout(createGhost, 1418);
 
+const startButton = ()=>{
+    beginFloat();
+    beginFloat2();
+    beginFloat3();
+    beginFloat4();
+}
 
 
 
-let ghostOne;
-let ghostTwo;
-let ghostThree;
-let ghostFour;
 
-let ghostList = [ghostOne, ghostTwo, ghostThree, ghostFour]
+// let ghostOne;
+// let ghostTwo;
+// let ghostThree;
+// let ghostFour;
 
+// let ghostList = [ghostOne, ghostTwo, ghostThree, ghostFour]
+
+//create score variable which adds points per every ghostHit/ghostClick
 let score = 0;
 const addPoints = (points) => {
   score += points;
@@ -75,13 +88,20 @@ const scoreDisplay = ()=>{
     console.log(score);
 }
 
+const nextLevel=()=>{
+    if (score >= 20){
+        roundTwo();
+    }
+}
 
+//each successful hit is +5 points added to the Score, consoleToScreen logged in statusBar
 const ghostHit = () => {
   addPoints(5);
   console.log("+5 Points!");
   consoleToScreen(`PLAYER 1 SCORE: ${score}`)
 };
 
+//target ghostId and change display to none so each ghost disappears on ghostHit
 const ghostClick = (event) => {
   const ghostId = event.target.id;
   const ghost = document.getElementById(ghostId);
@@ -90,6 +110,7 @@ const ghostClick = (event) => {
   console.log("Ghost clicked!");
 };
 
+//use setTimeOut to delay each ghost (array?) 
 const ghostAppearDelay = 2000;
 const initGhosts = () => {
   const ghosts = document.querySelectorAll(".ghosts");
@@ -109,4 +130,39 @@ window.addEventListener("load", initGhosts);
 
 const resetButton = ()=>{
     location.reload();
+}
+
+const beginFloat = ()=>{
+    let ghostOneFloater = document.querySelector('#ghost1')
+    ghostOneFloater.classList.toggle('floatingOne')
+}
+
+const beginFloat2 = ()=>{
+    let ghostTwoFloater = document.querySelector('#ghost2')
+    ghostTwoFloater.classList.toggle('floatingTwo')
+}
+
+const beginFloat3 = ()=>{
+    let ghostThreeFloater = document.querySelector('#ghost3')
+    ghostThreeFloater.classList.toggle('floatingThree')
+}
+const beginFloat4 = ()=>{
+    let ghostFourFloater = document.querySelector('#ghost4')
+    ghostFourFloater.classList.toggle('floatingFour')
+}
+
+//setup a math.random chance that "ghostRetaliate" function will initiialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its (newly created) keyframe and glassScreenBreak gif image appears, in which case player 1 or 2 dies
+
+//begin level 2
+const roundTwo = ()=>{
+    floatTwo1();
+    floatTwo2();
+    floatTwo3();
+    FloatTwo4();
+}
+
+// after roundTwo for player one, begin a new function for player2Turn where player 2 as a new cursor type gets to play through both levels (make p2 cursor different if possible or change ghosts or ghost color or something & change "SCORE" innerhtml css element to RED TEXT)
+
+const player2Turn = ()=>{
+
 }

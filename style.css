@@ -45,6 +45,35 @@ border-width:.1px;
     transition-delay:50ms;
 }
 
+.startButton{
+    display:flex;
+    text-align:center;
+    height:20px;
+    width:55px;
+    margin-top:14px;
+    margin-left:14px;
+    background-color:rgb(150, 29, 39);
+    color:rgb(238, 212, 218);
+    font-weight:bold;
+    z-index:2;
+    cursor:pointer;
+    border-radius: 4px;
+}
+.startButton:hover{
+    display:flex;
+    text-align:center;
+    height:22px;
+    width:52px;
+    margin-top:14px;
+    margin-left:14px;
+    background-color:rgb(163, 77, 98);
+    z-index:2;
+    cursor:pointer;
+    box-shadow: -.5px 4.5px 8px rgb(116, 54, 68);
+    opacity:.7;
+    transition-delay:50ms;
+}
+
 .playerScores{
     display:flex;
     justify-content:end;
@@ -176,6 +205,7 @@ display:none;
     height:30%;
     margin-top:40%;
     margin-right:70px;
+    
     z-index:3;
 }
 #grave2{
@@ -226,7 +256,7 @@ z-index:3;
     height:100px;
     background-color: rgb(87, 87, 87);
     margin-top:-140px;
-    min-width:859px;
+    /* min-width:859px; */
 }
 
 .footbar{
@@ -242,18 +272,235 @@ z-index:3;
 
 
 /* //keyframe Ghost animations */
-@keyframes ghostAnimation {
-    0% {
-      transform: translateY(0);
+    /* [[x axis-horizontal - y axis-vertical]] */
+
+  /* GHOST 1 */
+  @keyframes ghostFloatOne {
+    0%{
+        /* initial command */
+        margin-left:10%;
+        transform: translateX(0px)   scale(1.8);
     }
-    50% {
-      transform: translateY(-100px);
+
+    20%{
+        transform: translateX(180deg);
+    
     }
-    100% {
-      transform: translateY(0);
+
+    30%{
+        transform: translateY(28px) scale(.5);
+        opacity:.6;
     }
-  }
+
+    50%{
+            transform: translateY(30px);
+     }
+    
+     58%{
+        transform: translatex(-200px);
+        opacity:1;
+    }
+    63%{
+        
+    }
+
+   70%{
+        transform: translatey(70px) scale(.4);;
+    }
+
+    75%{
+        transform: translatey(25px) opacity(0);
+    }
+
+    83%{
+        transform: translatey(-230px) translatex(220px) rotatex(360deg)  translate3d(100px,-100px,100px);
+    }
   
-  .ghost {
-    animation: ghostAnimation 5s infinite;
+    90%{
+        transform: translatey(-170px)  scale(1.4);
+        opacity:0;
+    
+    }
+
+    100%{
+        transform: translate
+    }
+
+  }
+
+  .floatingOne{
+    animation: ghostFloatOne 8s ease-in-out infinite;
+
+  }
+
+  .floatingOne:hover {
+    /* Change the animation-play-state to paused on hover */
+    animation-play-state: paused;
+    /* animation: ghostFloatOne 6s; */
+  }
+
+  
+/* GHOST 2 */
+  @keyframes ghostFloatTwo {
+    0%{
+        /* initial command */
+        margin-right:10%;
+        transform: translateX(0px)   scale(.7);
+    }
+
+    20%{
+        transform: translateX(-110deg) scale(.8);
+    
+    }
+
+    30%{
+        transform: translateY(-98px) scale(.6);
+        opacity:.6;
+    }
+
+    50%{
+            transform: translateY(10px) scale(2);
+     }
+    
+     58%{
+        transform: translatex(-36px) scale(1);
+        opacity:.7;
+    }
+    65%{
+        opacity:.3;
+    }
+
+   70%{
+        transform: translatex(250px) translatey(16px) scale(.5);
+        opacity:0;
+    }
+
+    75%{
+        transform: translatey(25px) opacity(0);
+    }
+
+    83%{
+        transform: translatey(-140px) translatex(220px) rotatex(360deg)  translate3d(100px,-100px,100px);
+    }
+  
+    90%{
+        transform: translatey(-170px)  scale(1.4);
+        opacity:.8;
+    
+    }
+
+    100%{
+        transform: translatey(-238px) translatex(-220px);
+        opacity:.2;
+    }
+
+  }
+
+  .floatingTwo{
+    animation: ghostFloatTwo 10s ease-in-out infinite;
+
+  }
+
+  /* GHOST 3 */
+  @keyframes ghostFloatThree {
+    0%{
+        
+    }
+
+    10%{
+        transform: translatey(100px) translatex(90px);
+        opacity:.6;
+    }
+    20%{
+        transform: translatey(-40px) translatex(200px) scale(.8);
+    }
+    30%{
+        transform: translatey(-50px) translatex(170px) scale(.6);
+        opacity:.7;
+
+    }
+    35%{
+        transform: translatey(-67px) translatex(135px) scale(.5);
+        opacity:.0;
+    }
+    67%{
+        transform: translatey(-120px) translatex(93px) scale(1.3);
+        opacity:.1;
+    }
+
+    70%{
+        transform: translatey(-100px) translatex(20px) scale(.9);
+        opacity:1;
+    }
+    80%{
+        transform: translatey(-150px) translatex(-30px) scale(.6);
+        opacity:.6;
+    }
+    90%{
+        transform: translatey(-150px) translatex(-230px) scale(1.4);
+        opacity:.4;
+    }
+    100%{
+        transform: translatey(-20px) translatex(-300px) scale(.7);
+        opacity:.2;
+    }
+    
+
+  }
+
+  .floatingThree{
+    animation: ghostFloatThree 8s ease-in-out infinite;
+
+  }
+
+   /* GHOST 4 */
+   @keyframes ghostFloatFour {
+    0%{
+        
+    }
+
+    10%{
+        transform: translatey(-20px) translatex(-30px);
+        opacity:0;
+    }
+    20%{
+        transform: translatey(-240px) translatex(-290px) scale(.8);
+    }
+    30%{
+        transform: translatey(-150px) translatex(270px) scale(.9);
+        opacity:.7;
+
+    }
+    35%{
+        transform: translatey(-67px) translatex(135px) scale(.5);
+        opacity:.0;
+    }
+    67%{
+        transform: translatey(-120px) translatex(93px) scale(.8);
+        opacity:.1;
+    }
+
+    70%{
+        transform: translatey(-100px) translatex(20px) scale(.9);
+        opacity:1;
+    }
+    80%{
+        transform: translatey(-150px) translatex(-30px) scale(.6);
+        opacity:.9;
+    }
+    90%{
+        transform: translatey(-150px) translatex(-230px) scale(.8);
+        opacity:.7;
+    }
+    100%{
+        transform: translatey(-110px) translatex(-160px) scale(.7);
+        opacity:0;
+    }
+    
+
+  }
+
+  .floatingFour{
+    animation: ghostFloatFour 13s ease-in-out infinite;
+
   }
