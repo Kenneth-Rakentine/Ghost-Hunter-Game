@@ -126,8 +126,8 @@ const ghostClick = (event) => {
       clickedGhost.style.display = 'none';  
       ghostHit();
       console.log('ghost clicked');
-    }, 1000);
-    
+    }, 400);
+
   };
 
 //use setTimeOut to delay each ghost (array?) 
