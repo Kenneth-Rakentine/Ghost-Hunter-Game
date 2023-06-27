@@ -102,13 +102,33 @@ const ghostHit = () => {
 };
 
 //target ghostId and change display to none so each ghost disappears on ghostHit
+// const ghostClick = (event) => {
+//   const ghostId = event.target.id;
+//   const ghost = document.getElementById(ghostId);
+//   ghost.style.display = "none";
+//   ghostHit();
+//   console.log("Ghost clicked!");
+// };
 const ghostClick = (event) => {
-  const ghostId = event.target.id;
-  const ghost = document.getElementById(ghostId);
-  ghost.style.display = "none";
-  ghostHit();
-  console.log("Ghost clicked!");
-};
+    const clickedGhost = event.target;
+    const oldSrc = clickedGhost.src;
+    const splashImg = 'https://media.baamboozle.com/uploads/images/848417/1659679771_127028_gif-url.gif'; 
+  
+    clickedGhost.style.display = 'none';
+
+    const shotGif = document.createElement('img');
+    shotGif.src = splashImg;
+
+    clickedGhost.parentNode.insertBefore(shotGif, clickedGhost.nextSibling);
+  
+    setTimeout(() => {
+      shotGif.parentNode.removeChild(shotGif);
+      clickedGhost.style.display = 'none';  
+      ghostHit();
+      console.log('ghost clicked');
+    }, 1000);
+    
+  };
 
 //use setTimeOut to delay each ghost (array?) 
 const ghostAppearDelay = 2000;
