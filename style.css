@@ -1,0 +1,259 @@
+body {
+    cursor: url('https://raw.githubusercontent.com/coob113/fancy-cursors/master/target1.png') 64 64, auto !important;}
+a {cursor: url('https://raw.githubusercontent.com/coob113/fancy-cursors/master/target2.png') 64 64, auto !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.statusBar{
+    display:flex;
+    /* align-items:start; */
+    background-color: rgb(150, 145, 145);
+    border:solid rgb(99, 92, 92);
+border-width:.1px;
+    height:50px;
+    width:860px;
+    opacity:.90;
+    z-index:2;
+}
+
+.resetButton{
+    display:flex;
+    text-align:center;
+    height:20px;
+    margin-top:14px;
+    margin-left:14px;
+    background-color:green;
+    color:rgb(10, 9, 9);
+    font-weight:bold;
+    z-index:2;
+    cursor:pointer;
+    border-radius: 4px;
+}
+.resetButton:hover{
+    display:flex;
+    text-align:center;
+    height:22px;
+    width:52px;
+    margin-top:14px;
+    margin-left:14px;
+    background-color:rgb(58, 177, 88);
+    z-index:2;
+    cursor:pointer;
+    box-shadow: -.5px 4.5px 8px rgb(46, 29, 61);
+    opacity:.7;
+    transition-delay:50ms;
+}
+
+.playerScores{
+    display:flex;
+    justify-content:end;
+    align-self:center;
+    flex-direction: row-reverse;
+    margin-left:620px;
+    font-weight:bold;
+    font-size:16px;
+    color:rgb(26, 102, 8);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+ 
+.mainScreen{
+display:flex;
+justify-content:center;
+height:100%;
+min-width:860px;
+z-index:1;
+/* border:solid green; */
+
+    
+}
+
+.backGround{
+    display:flex;
+    position:relative;
+    width:100%;
+    /* border:solid red; */
+    z-index:1;
+    
+}
+
+.graveyard{
+    display:flex;
+    /* justify-content:center; */
+    height:80%;
+    max-width:950px;
+    z-index:1;
+    min-width:860px;
+}
+
+/* .gravestoneBarrier{
+    display:flex;
+    justify-content:space-evenly;
+} */
+
+.ghostContainer{
+    position: absolute;
+  /* display:flex; */
+  display:none;
+  align-self:center;
+  justify-content:center;
+    width: 100%;
+    height: 15%;
+    z-index:2;
+}
+.ghostContainerAppear{
+    position: absolute;
+  display:flex;
+  /* display:none; */
+  align-self:center;
+  justify-content:center;
+    /* width: 100%; */
+    height: 15%;
+    z-index:2;
+}
+
+.ghosts{
+    height:90%;
+    z-index:2;
+    margin-bottom:300px;
+    /* justify-content:space-between; */
+    }
+
+    
+
+#ghost1{
+display:flex;
+
+}
+#ghost2{
+display:flex;
+}
+#ghost3{
+display:flex;   
+}
+#ghost4{
+display:flex;  
+}
+
+#ghost1Disappear{
+display:none;
+}
+#ghost2Disappear{
+display:none;
+}
+#ghost3Disappear{
+display:none;
+}
+#ghost4Disappear{
+display:none;
+}
+
+
+.stoneContainer{
+    position:relative;
+    display:flex;
+    height:80%;
+    min-width:800px;
+    width:100%;
+    z-index:3;
+}
+
+.gravestone{
+    display:flex;
+    justify-content:space-between;
+    z-index:3;
+    height:60%;
+    margin-left:-40%;
+    /* margin-top:80%; */
+    /* margin-top:280px;
+    margin-left:-268px; */
+    position:relative;
+    
+}
+#grave1{
+    /* display:flex; */
+    height:30%;
+    margin-top:40%;
+    margin-right:70px;
+    z-index:3;
+}
+#grave2{
+    display:flex;
+    height:100px;
+    margin-top:40%;
+    margin-left:-280px;
+    z-index:3;
+}
+#grave3{
+    display:flex;
+    height:230px;
+    margin-top:40%;
+    z-index:3;
+}
+#grave4{
+    display:flex;
+    height:250px;
+    margin-top:40%;
+    z-index:3;
+    /* margin-left:0px; */
+}
+
+#grave5{
+    display:flex;
+    height:150px;
+    margin-top:40%;
+    padding-right:-100px;
+    z-index:3;
+}
+
+/* .tree{
+display:flex;
+z-index:3;
+}
+
+.treeImg{
+display:flex;
+z-index:3;
+} */
+
+.foreground{
+
+}
+
+.firstPerson{
+    display:flex;
+    height:100px;
+    background-color: rgb(87, 87, 87);
+    margin-top:-140px;
+    min-width:859px;
+}
+
+.footbar{
+    display:flex;
+    align-items:end;
+    background-color: rgb(70, 59, 59);
+ border: solid red;
+}
+
+
+
+
+
+
+/* //keyframe Ghost animations */
+@keyframes ghostAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .ghost {
+    animation: ghostAnimation 5s infinite;
+  }
