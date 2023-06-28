@@ -50,7 +50,7 @@ box-shadow:-3px -6px 25px rgb(129, 128, 128);
     display:flex;
     text-align:center;
     height:20px;
-    width:55px;
+    width:65px;
     margin-top:14px;
     margin-left:14px;
     background-color:rgb(150, 29, 39);
@@ -64,7 +64,7 @@ box-shadow:-3px -6px 25px rgb(129, 128, 128);
     display:flex;
     text-align:center;
     height:22px;
-    width:52px;
+    width:65px;
     margin-top:14px;
     margin-left:14px;
     background-color:rgb(163, 77, 98);
@@ -80,7 +80,7 @@ box-shadow:-3px -6px 25px rgb(129, 128, 128);
     justify-content:end;
     align-self:center;
     flex-direction: row-reverse;
-    margin-left:500px;
+    margin-left:300px;
     font-weight:bold;
     font-size:18px;
     color:rgb(94, 139, 87);
@@ -527,6 +527,69 @@ z-index:3;
 
   }
 
+/* Level 2 Ghost Animations */
+ /* GHOST 1 */
+ @keyframes ghostFloatOne2 {
+    0%{
+        /* initial command */
+        margin-left:10%;
+        transform: translateX(0px)   scale(1.8);
+    }
+
+    20%{
+        transform: translateX(180deg);
+    
+    }
+
+    30%{
+        transform: translateY(28px) scale(.5);
+        opacity:.6;
+    }
+
+    50%{
+            /* transform: translateY(30px); */
+            transform: translate3d(20px, 20px, 0px);
+     }
+    
+     58%{
+        transform: translatex(-200px);
+        opacity:1;
+    }
+    63%{
+        
+    }
+
+   70%{
+        transform: translatey(70px) scale(.4);;
+    }
+
+    75%{
+        transform: translatey(25px) opacity(0);
+    }
+
+    83%{
+        transform: translatey(-230px) translatex(220px) rotatex(360deg)  translate3d(100px,-100px,100px);
+    }
+  
+    90%{
+        transform: translatey(-170px)  scale(1.4);
+        opacity:0;
+    
+    }
+
+    100%{
+        transform: translate
+    }
+
+  }
+
+  .floatingOne2{
+    animation: ghostFloatOne2 3s ease-in-out infinite;
+
+  }
+
+
+
 
 /* GHOST ATTACK ANIMATION */
 
@@ -539,10 +602,11 @@ z-index:3;
     }
     
 }
+/* //ADD SHAKES to 1st ATTACK KEYFRAMES ^ ^  */
 
 
 .attackPlayer{
-    animation: ghostAttacker 1.2s;
+    animation: ghostAttacker 1.2s ;
  
 }
 

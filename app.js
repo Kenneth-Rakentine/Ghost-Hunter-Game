@@ -35,6 +35,16 @@ const generateRandomNum = (min, max)=>{
 };
 
 
+//create score variable which adds points per every ghostHit/ghostClick:
+let score = 0;
+const addPoints = (points) => {
+  score += points;
+};
+console.log(addPoints)
+const scoreDisplay = ()=>{
+    console.log(score);
+}
+
 //display score in points to top statusBar via innerHTML
 //scoreDisplay = console.log(score):
 const consoleToScreen = (content)=>{
@@ -70,6 +80,15 @@ const startButton = ()=>{
     beginFloat4();
 }
 
+const Lvl2Button = ()=>{
+  initGhosts();
+  begin2Float();
+  begin2Float2();
+  begin2Float3();
+  begin2Float4();
+}
+
+
 // let ghostOne;
 // let ghostTwo;
 // let ghostThree;
@@ -77,30 +96,75 @@ const startButton = ()=>{
 
 // let ghostList = [ghostOne, ghostTwo, ghostThree, ghostFour]
 
-//create score variable which adds points per every ghostHit/ghostClick:
-let score = 0;
-const addPoints = (points) => {
-  score += points;
-};
-console.log(addPoints)
-const scoreDisplay = ()=>{
-    console.log(score);
-}
+
 
 //Next Level/Round sequence:
-const nextLevel=()=>{
-    if (score >= 20){
-        roundTwo();
-    }
-}
+// const nextLevel=()=>{
+//     if (score >= 20){
+//         roundTwo();
+//     }
+// }
 
+let currentPlayer = 1;
+
+
+const playerTurn = ()=>{
+  if (currentPlayer === 1){
+    
+  }
+}
 //each successful hit is +5 points added to the Score, consoleToScreen logged in statusBar:
 const ghostHit = () => {
   addPoints(5);
   console.log("+5 Points!");
-  consoleToScreen(`PLAYER 1 SCORE: ${score}`)
+  consoleToScreen(`PLAYER ${currentPlayer} SCORE: ${score}`)
   ghostChanceAttack();
+  // if (score >= 20){
+  // }
 };
+
+// const ghostHit2 = () => {
+//   addPoints(5);
+//   console.log("+5 Points!");
+//   consoleToScreen(`PLAYER ${currentPlayer} SCORE: ${score}`)
+//   ghostChanceAttack2();
+// };
+
+// const ghostChanceAttack2 = ()=>{
+//   let randomChance = (generateRandomNum(0, 10));
+//   if (randomChance >= 5){
+//     // ghostAttackIndex();
+//     ghostAttack();
+//     setTimeout(GameOver, 700);
+//     setTimeout(reloadGame, 1400);
+//   }
+// }
+
+
+// if (currentPlayer === 2){
+//   ghostHit2();
+//   ghostChanceAttack2();
+// }
+//CURSOR PER PLAYER:
+// .custom-cursor-one {
+//   cursor: url('http://www.rw-designer.com/cursor-extern.php?id=509'), auto;
+// }
+
+// .custom-cursor-two {
+//   cursor: url('cursor-two.png'), auto;
+// }
+
+
+// //apply custom cursor one
+// document.classList.add('custom-cursor-one');
+
+// //apply custom cursor two
+// const swapCursor = ()=>{
+// document.classList.remove('custom-cursor-one');
+// document.classList.add('custom-cursor-two');
+// }
+
+
 
 //OLD FUNCTION: target ghostId and change display to none so each ghost disappears on ghostHit:
 // const ghostClick = (event) => {
@@ -158,6 +222,7 @@ const resetButton = ()=>{
 }
 
 //Ghost (All 4) animation keyframe functions for startButton function:
+//LEVEL 1 ghost animations
 const beginFloat = ()=>{
     let ghostOneFloater = document.querySelector('#ghost1')
     ghostOneFloater.classList.toggle('floatingOne')
@@ -176,6 +241,25 @@ const beginFloat4 = ()=>{
     let ghostFourFloater = document.querySelector('#ghost4')
     ghostFourFloater.classList.toggle('floatingFour')
 }
+
+//LEVEL 2 ghost animations
+const begin2Float = ()=>{
+  let ghostOneFloater2 = document.querySelector('#ghost1')
+  ghostOneFloater2.classList.toggle('floatingOne2')
+}
+const begin2Float2 = ()=>{
+  let ghostTwoFloater2 = document.querySelector('#ghost2')
+    ghostTwoFloater2.classList.toggle('floatingTwo2')
+}
+const begin2Float3 = ()=>{
+  let ghostThreeFloater2 = document.querySelector('#ghost3')
+  ghostThreeFloater2.classList.toggle('floatingThree2')
+}
+const begin2Float4 = ()=>{
+  let ghostFourFloater2 = document.querySelector('#ghost4')
+    ghostFourFloater2.classList.toggle('floatingFour2')
+}
+
 
 // Ghost ATTACKS Player 
 const ghostAttack = ()=>{
@@ -201,6 +285,9 @@ const reloadGame = ()=>{
   if (startOver === "Reload?"){
     location.reload();
   }
+  //  else if (startOver === "next player"){
+  //   setTimeout(player2Turn, 2000);
+  // }
   // setTimeout(() => {
   //   location.reload();
   // }, 2000);
@@ -215,12 +302,13 @@ const reloadGame = ()=>{
 //setup a math.random chance that "ghostAttack" function will initiialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its (newly created) keyframe and glassScreenBreak gif image appears, in which case player 1 or 2 dies
 
 const ghostChanceAttack = ()=>{
-  let randomChance = (generateRandomNum(0, 10));
-  if (randomChance >= 7){
+  let randomChance = (generateRandomNum(0, 20));
+  if (randomChance >= 19){
     // ghostAttackIndex();
     ghostAttack();
     setTimeout(GameOver, 700);
     setTimeout(reloadGame, 1400);
+  
   }
 }
 
@@ -238,6 +326,8 @@ const roundTwo = ()=>{
 
 // after roundTwo for player one, begin a new function for player2Turn where player 2 as a new cursor type gets to play through both levels (make p2 cursor different if possible or change ghosts or ghost color or something & change "SCORE" innerhtml css element to RED TEXT)
 
-const player2Turn = ()=>{
+// const player2Turn = ()=>{
+//   location.reload();
+// currentPlayer = 2;
+// }
 
-}
