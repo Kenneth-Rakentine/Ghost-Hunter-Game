@@ -1,7 +1,7 @@
 # Ghost-Hunter-Game
 
 # Ghost-Hunter
-![alt text](https://i.imgur.com/LrRcJI1.jpg)
+![alt text](https://i.imgur.com/0RFTHYm.jpg)
 
 
 //"duck hunt" style - 'GHOST HUNTER'
