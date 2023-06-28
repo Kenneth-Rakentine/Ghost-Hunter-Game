@@ -75,6 +75,35 @@ box-shadow:-3px -6px 25px rgb(129, 128, 128);
     transition-delay:50ms;
 }
 
+.level2Button{
+    display:flex;
+    text-align:center;
+    height:20px;
+    width:65px;
+    margin-top:14px;
+    margin-left:14px;
+    background-color:rgb(150, 29, 39);
+    color:rgb(238, 212, 218);
+    font-weight:bold;
+    z-index:2;
+    cursor:pointer;
+    border-radius: 4px;
+}
+.level2Button:hover{
+    display:flex;
+    text-align:center;
+    height:22px;
+    width:65px;
+    margin-top:14px;
+    margin-left:14px;
+    background-color:rgb(163, 77, 98);
+    z-index:2;
+    cursor:pointer;
+    box-shadow: -.5px 4.5px 8px rgb(116, 54, 68);
+    opacity:.7;
+    transition-delay:50ms;
+}
+
 .playerScores{
     display:flex;
     justify-content:end;
@@ -527,9 +556,80 @@ z-index:3;
 
   }
 
+  /* ___________________________________________________ */
+
 /* Level 2 Ghost Animations */
+
  /* GHOST 1 */
  @keyframes ghostFloatOne2 {
+    0%{
+        /* initial command */
+        margin-left:10%;
+        transform: translateX(0px)   scale(.2);
+    }
+
+    20%{
+        transform: translateX(180deg);
+    
+    }
+
+    30%{
+        transform: translateY(28px) translate3d(20px, 20px, 0px) scale(.7);
+        opacity:.6;
+    }
+
+    50%{
+            /* transform: translateY(30px); */
+            transform: translate3d(-40px, -120px, -80px);
+     }
+    
+     58%{
+        transform: translatex(-200px);
+        opacity:1;
+    }
+    63%{
+        
+    }
+
+   70%{
+        transform: translatey(70px) scale(.4);;
+    }
+
+    75%{
+        transform: translatey(25px) opacity(0);
+    }
+
+    83%{
+        transform: translatey(-230px) translatex(220px) rotatex(360deg)  translate3d(100px,-100px,100px);
+    }
+  
+    90%{
+        transform: translatey(-170px)  scale(1.4);
+        opacity:0;
+    
+    }
+
+    100%{
+        transform: translate
+    }
+
+  }
+
+  .floatingOne2{
+    animation: ghostFloatOne2 6.6s ease-in-out infinite;
+
+  }
+
+  .floatingOne2:hover {
+    /* Change the animation-play-state to paused on hover */
+    animation-play-state: paused;
+    transform: translate3d(-200px, -90px, 50px) translatex(400);
+    
+    /* animation: ghostFloatOne 6s; */
+  }
+
+/* GHOST 2 */
+@keyframes ghostFloatTwo2 {
     0%{
         /* initial command */
         margin-left:10%;
@@ -583,13 +683,107 @@ z-index:3;
 
   }
 
-  .floatingOne2{
-    animation: ghostFloatOne2 3s ease-in-out infinite;
+  .floatingTwo2{
+    animation: ghostFloatTwo2 8s ease-in-out infinite;
+  }
+
+    /* GHOST 3 */
+@keyframes ghostFloatThree2 {
+    0%{
+        /* initial command */
+        margin-left:10%;
+        transform: translateX(0px)   scale(1.8);
+    }
+
+    20%{
+        transform: translateX(180deg);
+    
+    }
+
+    30%{
+        transform: translateY(28px) scale(.5);
+        opacity:.6;
+    }
+
+    50%{
+            /* transform: translateY(30px); */
+            transform: translate3d(20px, 20px, 0px);
+     }
+    
+     58%{
+        transform: translatex(-200px);
+        opacity:1;
+    }
+    63%{
+        
+    }
+
+   70%{
+        transform: translatey(70px) scale(.4);;
+    }
+
+    75%{
+        transform: translatey(25px) opacity(0);
+    }
+
+    83%{
+        transform: translatey(-230px) translatex(220px) rotatex(360deg)  translate3d(100px,-100px,100px);
+    }
+  
+    90%{
+        transform: translatey(-170px)  scale(1.4);
+        opacity:0;
+    
+    }
+
+    100%{
+        transform: translate
+    }
+
+  }
+
+  .floatingThree2{
+    animation: ghostFloatThree2 7s ease-in-out infinite;
 
   }
 
 
+      /* GHOST 3 */
+@keyframes ghostFloatFour2 {
+    0% { transform: translate(150px, -71px) rotate(40deg); }
+  10% { transform: translate(-1px, -2px) rotate(-100deg); }
+  20% { transform: translate(-3px, 0px) rotate(150deg); }
+  30% { transform: translate(3px, 2px) rotate(30deg); }
+  40% { transform: translate(1px, -1px) rotate(-201deg); }
+  50% { transform: translate(-1px, 2px) rotate(-180deg); }
+  60% { transform: translate(-3px, 1px) rotate(-300deg); }
+  70% { transform: translate(3px, 1px) rotate(-91deg); }
+  80% { transform: translate(-1px, -1px) rotate(-31deg); }
+  90% { transform: translate(1px, 2px) rotate(100deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 
+  }
+  @keyframes ghostFloatFour2-2 {
+    0% { transform: translate(-60px, -71px) rotate(40deg); }
+    10%{transform:translatey(140px) rotate3d(93deg,40deg, -220deg) scale(.7);}
+  40% {transform: rotateX(360deg) rotateY(360deg) scale(1.5) translate3d(100px,-100px,100px); }
+  60% {transform: rotateX(200deg) rotateY(-17eg) scale(1) translate3d(100px,-100px,100px); }
+    90%{transform: translatex(-100px) translatey(-40px) rotate3d(-50deg,-243deg,-240deg);}
+  }
+
+.floatingFour2{
+    animation: ghostFloatFour2-2 5s ease-in-out infinite;
+}
+
+  .floatingFour2:hover{
+    animation: ghostFloatFour2 .4s forwards infinite;
+
+  }
+
+  
+
+
+  /* ______________________________________________ */
 
 /* GHOST ATTACK ANIMATION */
 
