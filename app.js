@@ -58,7 +58,7 @@ const consoleToScreen = (content)=>{
 }
 
 //make ghost appear from empty img div (from css .ghostContainer display:none either onclick=start button OR setTimeout from page refresh)
-function createGhost() {
+const createGhost = ()=>{
     const ghostContainer = document.querySelector('.ghostContainer');
     const ghostImage = document.createElement('img');
     ghostImage.src = '';
@@ -73,7 +73,20 @@ function createGhost() {
   
   setTimeout(createGhost, 1418);
 
+  //replace 'ghosts' class w/Boss img to make BOSS ghost appear[for Lvl4Button function]:
+  const createBoss = ()=>{
+    const ghosts = document.getElementsByClassName('ghosts');
+    for (let i = 0; i < ghosts.length; i++) {
+      ghosts[i].style.display = 'none';
+    }
+    const ghost1 = document.getElementById('ghost1');
+    ghost1.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2a2628-6126-4767-9684-0b5f75a06612/dd546ex-d5116361-3d5c-4aaa-8eb2-162626f7137f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMmEyNjI4LTYxMjYtNDc2Ny05Njg0LTBiNWY3NWEwNjYxMlwvZGQ1NDZleC1kNTExNjM2MS0zZDVjLTRhYWEtOGViMi0xNjI2MjZmNzEzN2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZYXqmKSpAzXuJUt0afhaAk6hISURCxcFkDTwjHq4CWo';
+    ghost1.style.display = 'block';
+  
+  }
+
 const startButton = ()=>{
+    // initGhosts();
     beginFloat();
     beginFloat2();
     beginFloat3();
@@ -86,6 +99,22 @@ const Lvl2Button = ()=>{
   begin2Float2();
   begin2Float3();
   begin2Float4();
+}
+
+const Lvl3Button = ()=>{
+  initGhosts();
+  begin3Float();
+  begin3Float2();
+  begin3Float3();
+  begin3Float4();
+}
+
+const Lvl4Button = ()=>{
+  createBoss();
+  // begin4Float();
+  // begin4Float2();
+  // begin4Float3();
+  // begin4Float4();
 }
 
 
@@ -175,6 +204,8 @@ const ghostHit = () => {
 //   console.log("Ghost clicked!");
 // };
 
+//_______________________________________
+
 //on click, replace ghost with splat gif, remove old gif,remove splat gif after setTimeout:
 const ghostClick = (event) => {
     const clickedGhost = event.target;
@@ -198,7 +229,7 @@ const ghostClick = (event) => {
   };
 
 //use setTimeOut to delay each ghost: 
-const ghostAppearDelay = 2000;
+const ghostAppearDelay = 1500;
 const initGhosts = () => {
   const ghosts = document.querySelectorAll(".ghosts");
   let delay = 0;
@@ -258,6 +289,42 @@ const begin2Float3 = ()=>{
 const begin2Float4 = ()=>{
   let ghostFourFloater2 = document.querySelector('#ghost4')
     ghostFourFloater2.classList.toggle('floatingFour2')
+}
+
+//LEVEL 3 ghost animations
+const begin3Float = ()=>{
+  let ghostOneFloater3 = document.querySelector('#ghost1')
+  ghostOneFloater3.classList.toggle('floatingOne3')
+}
+const begin3Float2 = ()=>{
+  let ghostTwoFloater3 = document.querySelector('#ghost2')
+    ghostTwoFloater3.classList.toggle('floatingTwo3')
+}
+const begin3Float3 = ()=>{
+  let ghostThreeFloater3 = document.querySelector('#ghost3')
+  ghostThreeFloater3.classList.toggle('floatingThree3')
+}
+const begin3Float4 = ()=>{
+  let ghostFourFloater3 = document.querySelector('#ghost4')
+    ghostFourFloater3.classList.toggle('floatingFour3')
+}
+
+//LEVEL 4 ghost animations
+const begin4Float = ()=>{
+  let ghostOneFloater4 = document.querySelector('#ghost1')
+  ghostOneFloater4.classList.toggle('floatingOne4')
+}
+const begin4Float2 = ()=>{
+  let ghostTwoFloater4 = document.querySelector('#ghost2')
+    ghostTwoFloater4.classList.toggle('floatingTwo4')
+}
+const begin4Float3 = ()=>{
+  let ghostThreeFloater4 = document.querySelector('#ghost3')
+  ghostThreeFloater4.classList.toggle('floatingThree4')
+}
+const begin4Float4 = ()=>{
+  let ghostFourFloater4 = document.querySelector('#ghost4')
+    ghostFourFloater4.classList.toggle('floatingFour4')
 }
 
 
