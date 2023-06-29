@@ -393,6 +393,29 @@ z-index:3;
     transition:3.4s;
 }
 
+.playerOneButton{
+    display:flex;
+    text-align:center;
+   align-items:center;
+    background-color:rgb(73, 43, 71);
+    color:rgb(255, 251, 251);
+    font-weight:900;
+    font-size:30;
+    z-index:2;
+    cursor:pointer;
+    border-radius: 4px;
+}
+.playerOneButton:hover{
+    display:flex;
+    text-align:center;
+    background-color:rgb(126, 62, 134);
+    z-index:2;
+    cursor:pointer;
+    box-shadow: 8px 4.5px 8px rgb(240, 123, 234);
+    opacity:.7;
+    transition-delay:90ms;
+}
+
 .playerTwoButton{
     display:flex;
     text-align:center;
@@ -416,6 +439,23 @@ z-index:3;
     transition-delay:90ms;
 }
 
+
+.playerState{
+    display:flex;
+    justify-content:end;
+    align-self:center;
+    flex-direction: row-reverse;
+    margin-left:250px;
+    font-weight:bold;
+    font-size:18px;
+    color:rgb(94, 139, 87);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgb(8, 49, 29);
+    letter-spacing:.8px;
+    background-color:rgb(104, 105, 103);
+    border-radius: 4px;
+    box-shadow:2.4px 2.9px 4px rgb(58, 59, 58);
+}
 
 /* //keyframe Ghost animations */
     /* [[x axis-horizontal - y axis-vertical]] */

@@ -47,6 +47,16 @@ console.log(addPoints)
 const scoreDisplay = ()=>{
     console.log(score);
 }
+let score2 = 0;
+const addPoints2 = (points2) => {
+  score2 += points2;
+  winScore();
+};
+console.log(addPoints2)
+const scoreDisplay2 = ()=>{
+    console.log(score2);
+}
+
 
 
 //print 'You Win' to Screen via 'ghostContainer':
@@ -66,7 +76,7 @@ const winScore = ()=>{
 if (score >= 50){
   highScore("YOU WIN");
   // setTimeout(highScore, 1000);
-}
+} 
 };
 
 //display score in points to top statusBar via innerHTML
@@ -111,7 +121,7 @@ const createGhost = ()=>{
 
 
 
-  //replace 'ghosts' class w/Boss img to make BOSS ghost appear[for Lvl4Button function]:
+  //replace 'ghosts' class w/Boss img to make BOSS ghost appear[for Lvl4Button function] by hiding ghosts class with display:none and changing ghost1 gif to new img/gif via #ghost1 id:
   const createBoss = ()=>{
     const ghosts = document.getElementsByClassName('ghosts');
     const gravestoneElements = document.getElementsByClassName('gravestone');
@@ -140,6 +150,7 @@ const startButton = ()=>{
 }
 
 const Lvl2Button = ()=>{
+  swapBkg();
   initGhosts();
   begin2Float();
   begin2Float2();
@@ -148,6 +159,7 @@ const Lvl2Button = ()=>{
 }
 
 const Lvl3Button = ()=>{
+  swapBkg2();
   initGhosts();
   begin3Float();
   begin3Float2();
@@ -156,6 +168,7 @@ const Lvl3Button = ()=>{
 }
 
 const Lvl4Button = ()=>{
+  swapBkg3();
   createBoss();
   begin4Float();
   // begin4Float2();
@@ -164,38 +177,61 @@ const Lvl4Button = ()=>{
 }
 
 
-// let ghostOne;
-// let ghostTwo;
-// let ghostThree;
-// let ghostFour;
+//switch out background image per levels 2, 3, & 4 via "lvl_button"s:
+// level 2:
+const swapBkg = ()=>{
+  let graveBkg = document.querySelector('.graveyard');
+    graveBkg.setAttribute('src', 'https://i.ibb.co/m0GvLqf/Ghost-Hunter-background-Image-TWO.jpg')
+};
 
-// let ghostList = [ghostOne, ghostTwo, ghostThree, ghostFour]
+// level 3:
+const swapBkg2 = ()=>{
+  let graveBkg = document.querySelector('.graveyard');
+    graveBkg.setAttribute('src', 'https://i.ibb.co/3SmwyhK/Ghost-Hunter-background-Image-THREE.jpg')
+};
+
+// level 4:
+const swapBkg3 = ()=>{
+  let graveBkg = document.querySelector('.graveyard');
+    graveBkg.setAttribute('src', 'https://i.ibb.co/S5qspZR/Ghost-Hunter-background-Image-FOUR.jpg')
+};
 
 
+// let currentPlayer = 1;
 
-//Next Level/Round sequence:
-// const nextLevel=()=>{
-//     if (score >= 20){
-//         roundTwo();
-//     }
+
+// const playerTurn = ()=>{
+//   if (currentPlayer === 1){
+    
+//   }
 // }
 
-let currentPlayer = 1;
-
-
-const playerTurn = ()=>{
-  if (currentPlayer === 1){
-    
-  }
+const currentPlayerTwo = ()=>{
+  isPlayerTwo = !isPlayerTwo;
+  console.clear();
+  
 }
+
+const currentPlayerOne = ()=>{
+  isPlayerTwo = false;
+  console.clear();
+  
+}
+
+
 //each successful hit is +5 points added to the Score, consoleToScreen logged in statusBar:
 const ghostHit = () => {
+  if (isPlayerTwo) {
+    addPoints(5);
+    console.log("+5 Points!");
+    consoleToScreen(`PLAYER 2 SCORE: ${score}`)
+    ghostChanceAttack();  
+  } else {
   addPoints(5);
   console.log("+5 Points!");
-  consoleToScreen(`PLAYER ${currentPlayer} SCORE: ${score}`)
-  ghostChanceAttack();
-  // if (score >= 20){
-  // }
+  consoleToScreen(`PLAYER 1 SCORE: ${score}`)
+  ghostChanceAttack();  
+  }
 };
 
 // _________________________________________________________
@@ -205,7 +241,7 @@ document.addEventListener('mousemove', function(event) {
   if (isPlayerTwo) {
     document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=509), auto';
   } else {
-    document.body.style.cursor = 'url(https://raw.githubusercontent.com/coob113/fancy-cursors/master/target1.png), auto';
+    document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=517), auto';
   }
 });
 
@@ -217,51 +253,6 @@ document.addEventListener('mousemove', function(event) {
 //   console.log("+5 Points!");
 //   consoleToScreen(`PLAYER ${currentPlayer} SCORE: ${score}`)
 //   ghostChanceAttack2();
-// };
-
-// const ghostChanceAttack2 = ()=>{
-//   let randomChance = (generateRandomNum(0, 10));
-//   if (randomChance >= 5){
-//     // ghostAttackIndex();
-//     ghostAttack();
-//     setTimeout(GameOver, 700);
-//     setTimeout(reloadGame, 1400);
-//   }
-// }
-
-
-// if (currentPlayer === 2){
-//   ghostHit2();
-//   ghostChanceAttack2();
-// }
-//CURSOR PER PLAYER:
-// .custom-cursor-one {
-//   cursor: url('http://www.rw-designer.com/cursor-extern.php?id=509'), auto;
-// }
-
-// .custom-cursor-two {
-//   cursor: url('cursor-two.png'), auto;
-// }
-
-
-// //apply custom cursor one
-// document.classList.add('custom-cursor-one');
-
-// //apply custom cursor two
-// const swapCursor = ()=>{
-// document.classList.remove('custom-cursor-one');
-// document.classList.add('custom-cursor-two');
-// }
-
-
-
-//OLD FUNCTION: target ghostId and change display to none so each ghost disappears on ghostHit:
-// const ghostClick = (event) => {
-//   const ghostId = event.target.id;
-//   const ghost = document.getElementById(ghostId);
-//   ghost.style.display = "none";
-//   ghostHit();
-//   console.log("Ghost clicked!");
 // };
 
 //_________________________________________________________
@@ -431,7 +422,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 20));
   //set to 19 when finished:
-  if (randomChance >= 10){
+  if (randomChance >= 19){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
