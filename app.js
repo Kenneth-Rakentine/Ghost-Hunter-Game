@@ -34,7 +34,8 @@ const generateRandomNum = (min, max)=>{
   return rand;
 };
 
-let isplayerTwo = false;
+//player turn state:
+let isPlayerTwo = false;
 
 //create score variable which adds points per every ghostHit/ghostClick:
 let score = 0;
@@ -197,6 +198,20 @@ const ghostHit = () => {
   // }
 };
 
+// _________________________________________________________
+//player 2 turn:
+
+document.addEventListener('mousemove', function(event) {
+  if (isPlayerTwo) {
+    document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=509), auto';
+  } else {
+    document.body.style.cursor = 'url(https://raw.githubusercontent.com/coob113/fancy-cursors/master/target1.png), auto';
+  }
+});
+
+
+
+
 // const ghostHit2 = () => {
 //   addPoints(5);
 //   console.log("+5 Points!");
@@ -249,7 +264,7 @@ const ghostHit = () => {
 //   console.log("Ghost clicked!");
 // };
 
-//_______________________________________
+//_________________________________________________________
 
 //on click, replace ghost with splat gif, remove old gif,remove splat gif after setTimeout:
 const ghostClick = (event) => {
