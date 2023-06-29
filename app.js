@@ -61,7 +61,7 @@ const highScore = (winContent)=>{
 
 //When score reaches 50, initiate WIN State:
 const winScore = ()=>{
-if (score >= 10){
+if (score >= 50){
   highScore("YOU WIN");
   // setTimeout(highScore, 1000);
 }
@@ -414,11 +414,14 @@ const reloadGame = ()=>{
 
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 20));
-  if (randomChance >= 19){
+  //set to 19 when finished:
+  if (randomChance >= 10){
     // ghostAttackIndex();
     ghostAttack();
-    setTimeout(GameOver, 700);
-    setTimeout(reloadGame, 1400);
+    ghostAttack2();
+    console.log("Ghost Attacked!");
+    setTimeout(GameOver, 1300);
+    setTimeout(reloadGame, 2100);
   
   }
 }
