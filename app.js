@@ -39,30 +39,33 @@ const generateRandomNum = (min, max)=>{
 let score = 0;
 const addPoints = (points) => {
   score += points;
+  winScore();
 };
 console.log(addPoints)
 const scoreDisplay = ()=>{
     console.log(score);
 }
 
-//When score reaches 50, initiate WIN State:
 
-if (score >= 50){
-  highScore("YOU WIN");
-  // setTimeout(highScore, 1000);
-};
-
+//print 'You Win' to Screen via 'ghostContainer':
 const highScore = (winContent)=>{
-  let winScreen = document.querySelector('.ghostContainer')
-  let printer = document.createElement('div')
+  let winScreen = document.querySelector('.ghostContainer');
+  let printer = document.createElement('div');
   printer.classList.add('winTxtContainer');
   printer.innerHTML = winContent;
+  
 
   winScreen.innerHTML = '';
-  screen.appendChild(printer);
+  winScreen.appendChild(printer);
 }
 
-
+//When score reaches 50, initiate WIN State:
+const winScore = ()=>{
+if (score >= 10){
+  highScore("YOU WIN");
+  // setTimeout(highScore, 1000);
+}
+};
 
 //display score in points to top statusBar via innerHTML
 //scoreDisplay = console.log(score):

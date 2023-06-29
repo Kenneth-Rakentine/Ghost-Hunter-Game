@@ -380,8 +380,17 @@ z-index:3;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:26px;
-    color:red;
+    height:300px;
+    width:450px;
+    margin-top:-170px;
+    font-size:80px;
+    color:rgb(168, 22, 22);
+    /* text-shadow:4px 6px 4px rgb(201, 45, 45); */
+    font-weight:bold;
+    letter-spacing:4px;
+    z-index:2;
+    opacity:1;
+    transition:3.4s;
 }
 
 
