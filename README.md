@@ -3,6 +3,17 @@
 # Ghost-Hunter
 ![alt text](https://i.imgur.com/0RFTHYm.jpg)
 
+A Duck Hunt-style first-person shooter with ghosts that takes place in a graveyard throughout 3 levels + a Boss Level.
+
+Point-and-click to fire at the ghost's heads and earn +5 points per target. .Earn 50 points and you reach the High Score to win the game. 
+
+INSTRUCTIONS:
+Start by selecting your Player and then clicking the "Level 1" button. The ghosts will populate and begin to scatter. Your job is to aim as best as you can at the head and click to shoot. Each successful hit is an additional five points. The winning goal is 50 points. Once you defeat each ghost, bove onto the next round by clicking the follow "Level" button.
+
+The boss arrives in level four and is the final battle. Ghosts enemies can also attack back at the player. The will swoop in at the screen and inflict damage. Each hitis a lethal attack and results in a Game Over, at which point the player has the option to reset the game. At any point in the game, you can hit the "reset" button manually to clear the exising ghosts and levels and restart at level 1.
+
+This is a Two-player game. To switch players, select the "Player One" or "Player Two" button at the bottom of the screen. Player 1 is green and Player 2 is red. Ghost Hunter is a co-op game, which means that each player's scores are summed to reach a single ultimate goal and win the game after all enemies are destroyed. 
+
 
 //"duck hunt" style - 'GHOST HUNTER'
 //LOAD SCREEN on page load -music starts here with splash screen image (photoshop my own)

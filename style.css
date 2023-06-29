@@ -397,7 +397,7 @@ z-index:3;
     display:flex;
     text-align:center;
    align-items:center;
-    background-color:rgb(73, 43, 71);
+    background-color:rgb(12, 73, 27);
     color:rgb(255, 251, 251);
     font-weight:900;
     font-size:30;
@@ -408,7 +408,7 @@ z-index:3;
 .playerOneButton:hover{
     display:flex;
     text-align:center;
-    background-color:rgb(126, 62, 134);
+    background-color:rgb(37, 117, 80);
     z-index:2;
     cursor:pointer;
     box-shadow: 8px 4.5px 8px rgb(240, 123, 234);
