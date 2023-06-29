@@ -45,6 +45,25 @@ const scoreDisplay = ()=>{
     console.log(score);
 }
 
+//When score reaches 50, initiate WIN State:
+
+if (score >= 50){
+  highScore("YOU WIN");
+  // setTimeout(highScore, 1000);
+};
+
+const highScore = (winContent)=>{
+  let winScreen = document.querySelector('.ghostContainer')
+  let printer = document.createElement('div')
+  printer.classList.add('winTxtContainer');
+  printer.innerHTML = winContent;
+
+  winScreen.innerHTML = '';
+  screen.appendChild(printer);
+}
+
+
+
 //display score in points to top statusBar via innerHTML
 //scoreDisplay = console.log(score):
 const consoleToScreen = (content)=>{
@@ -75,15 +94,15 @@ const createGhost = ()=>{
 
 
 // hide 2 ghosts for lvl 1:
-const hide2Ghosts = ()=>{
-  let ghost3 = document.getElementById('#ghost3');
-  let ghost4 = document.getElementById('#ghost4');
+// const hide2Ghosts = ()=>{
+//   let ghost3 = document.getElementById('#ghost3');
+//   let ghost4 = document.getElementById('#ghost4');
 
-if (ghost3 && ghost4){
-  ghost3.style.display = 'none';
-  ghost4.style.display = 'none';
-}
-}
+// if (ghost3 && ghost4){
+//   ghost3.style.display = 'none';
+//   ghost4.style.display = 'none';
+// }
+// }
 
 
 
@@ -108,7 +127,7 @@ if (ghost3 && ghost4){
 
 const startButton = ()=>{
     // initGhosts();
-    hide2Ghosts();
+    // hide2Ghosts();
     beginFloat();
     beginFloat2();
     beginFloat3();

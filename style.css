@@ -376,11 +376,19 @@ z-index:3;
     width:900px;
 }
 
+.winTxtContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    color:red;
+}
 
 
 /* //keyframe Ghost animations */
     /* [[x axis-horizontal - y axis-vertical]] */
 
+/* Level 1 Ghost Animations */
   /* GHOST 1 */
   @keyframes ghostFloatOne {
     0%{
@@ -468,7 +476,7 @@ z-index:3;
     }
 
     50%{
-            transform: translateY(10px) scale(2);
+            transform: translateY(10px) translatex(182px) scale(2);
      }
     
      58%{
@@ -476,6 +484,7 @@ z-index:3;
         opacity:.7;
     }
     65%{
+        transform: translatex(236px);
         opacity:.3;
     }
 
@@ -840,6 +849,7 @@ z-index:3;
   90% { transform: translate(1px, 2px) rotate(100deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 
+
   }
   @keyframes ghostFloatFour2-2 {
     0% { transform: translate(-60px, -71px) rotate(10deg); }
@@ -847,6 +857,15 @@ z-index:3;
   40% {transform: rotateX(360deg) rotateY(360deg) scale(1.5) translate3d(100px,-100px,100px); }
   60% {transform: rotateX(200deg) rotateY(-17eg) scale(1) translate3d(100px,-100px,100px); }
     90%{transform: translatex(-100px) translatey(-40px) rotate3d(-50deg,-243deg,-240deg);}
+
+/* hide ghost 4 for level 2 */
+    0%{
+        opacity:0;
+     }
+    
+     100%{
+         opacity:0;
+     }
   }
 
 .floatingFour2{
