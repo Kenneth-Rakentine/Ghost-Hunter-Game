@@ -108,18 +108,6 @@ const createGhost = ()=>{
   setTimeout(createGhost, 1418);
 
 
-// hide 2 ghosts for lvl 1:
-// const hide2Ghosts = ()=>{
-//   let ghost3 = document.getElementById('#ghost3');
-//   let ghost4 = document.getElementById('#ghost4');
-
-// if (ghost3 && ghost4){
-//   ghost3.style.display = 'none';
-//   ghost4.style.display = 'none';
-// }
-// }
-
-
 
   //replace 'ghosts' class w/Boss img to make BOSS ghost appear[for Lvl4Button function] by hiding ghosts class with display:none and changing ghost1 gif to new img/gif via #ghost1 id:
   const createBoss = ()=>{
@@ -131,14 +119,25 @@ const createGhost = ()=>{
     const ghost1 = document.getElementById('ghost1');
     ghost1.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2a2628-6126-4767-9684-0b5f75a06612/dd546ex-d5116361-3d5c-4aaa-8eb2-162626f7137f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMmEyNjI4LTYxMjYtNDc2Ny05Njg0LTBiNWY3NWEwNjYxMlwvZGQ1NDZleC1kNTExNjM2MS0zZDVjLTRhYWEtOGViMi0xNjI2MjZmNzEzN2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZYXqmKSpAzXuJUt0afhaAk6hISURCxcFkDTwjHq4CWo';
     ghost1.style.display = 'flex';
-
-    //hides gravestone img elements
-    // for (let i = 0; i < gravestoneElements.length; i++) {
-    //   const element = gravestoneElements[i];
-    //   element.style.display = 'none';
-    // }
+  };
+    // hides gravestone img elements
+    const hideGraves = () => {
+      let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5'];
+    
+      for (let i = 0; i < graveIds.length; i++) {
+        const element = document.querySelector(graveIds[i]);
+        if (element) {
+          element.setAttribute('src', 'https://pngimg.com/d/dot_PNG22.png');
+        }
+      }
+      //fix "firstPerson" class margin-top to adjust the screen positioning after removinng foreground elements:
+      let bottomMargin = document.querySelector('.firstPerson')
+      if (bottomMargin) {
+        bottomMargin.style.marginTop = '-114px';
+      }
+    };
   
-  }
+  
 
 const startButton = ()=>{
     // initGhosts();
@@ -170,6 +169,7 @@ const Lvl3Button = ()=>{
 const Lvl4Button = ()=>{
   swapBkg3();
   createBoss();
+  hideGraves();
   begin4Float();
   // begin4Float2();
   // begin4Float3();
@@ -187,24 +187,20 @@ const swapBkg = ()=>{
 // level 3:
 const swapBkg2 = ()=>{
   let graveBkg = document.querySelector('.graveyard');
-    graveBkg.setAttribute('src', 'https://i.ibb.co/3SmwyhK/Ghost-Hunter-background-Image-THREE.jpg')
+    graveBkg.setAttribute('src', 'https://i.ibb.co/S5qspZR/Ghost-Hunter-background-Image-FOUR.jpg')
 };
 
 // level 4:
 const swapBkg3 = ()=>{
   let graveBkg = document.querySelector('.graveyard');
-    graveBkg.setAttribute('src', 'https://i.ibb.co/S5qspZR/Ghost-Hunter-background-Image-FOUR.jpg')
+    graveBkg.setAttribute('src', 'https://media.tenor.com/AXYSMOzS4RUAAAAC/graveyard-grim.gif')
+  ;
+  
 };
 
 
-// let currentPlayer = 1;
 
 
-// const playerTurn = ()=>{
-//   if (currentPlayer === 1){
-    
-//   }
-// }
 
 const currentPlayerTwo = ()=>{
   isPlayerTwo = !isPlayerTwo;
@@ -422,7 +418,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 20));
   //set to 19 when finished:
-  if (randomChance >= 19){
+  if (randomChance >= 18){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
@@ -433,22 +429,5 @@ const ghostChanceAttack = ()=>{
   }
 }
 
-//******IF SCORE >=20, initiate roundTWO*********/
 
-
-
-// //begin level 2
-// const roundTwo = ()=>{
-//     floatTwo1();
-//     floatTwo2();
-//     floatTwo3();
-//     FloatTwo4();
-// }
-
-// after roundTwo for player one, begin a new function for player2Turn where player 2 as a new cursor type gets to play through both levels (make p2 cursor different if possible or change ghosts or ghost color or something & change "SCORE" innerhtml css element to RED TEXT)
-
-// const player2Turn = ()=>{
-//   location.reload();
-// currentPlayer = 2;
-// }
 
