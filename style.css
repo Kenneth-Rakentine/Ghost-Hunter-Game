@@ -393,6 +393,29 @@ z-index:3;
     transition:3.4s;
 }
 
+.playerTwoButton{
+    display:flex;
+    text-align:center;
+   align-items:center;
+    background-color:rgb(150, 29, 39);
+    color:rgb(238, 212, 218);
+    font-weight:900;
+    font-size:30;
+    z-index:2;
+    cursor:pointer;
+    border-radius: 4px;
+}
+.playerTwoButton:hover{
+    display:flex;
+    text-align:center;
+    background-color:rgb(163, 77, 98);
+    z-index:2;
+    cursor:pointer;
+    box-shadow: 8px 4.5px 8px rgb(202, 73, 103);
+    opacity:.7;
+    transition-delay:90ms;
+}
+
 
 /* //keyframe Ghost animations */
     /* [[x axis-horizontal - y axis-vertical]] */

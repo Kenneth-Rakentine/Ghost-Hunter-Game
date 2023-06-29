@@ -34,6 +34,7 @@ const generateRandomNum = (min, max)=>{
   return rand;
 };
 
+let isplayerTwo = false;
 
 //create score variable which adds points per every ghostHit/ghostClick:
 let score = 0;
