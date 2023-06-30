@@ -58,6 +58,25 @@ const scoreDisplay2 = ()=>{
 }
 
 
+//print 'You Lose' to screen via 'ghostContainer':
+const youLose = (lostTxt)=>{
+  let textContainDiv = document.querySelector('.ghostContainer');
+  let type = document.createElement('div')
+  type.classList.add('loseTxtContainer')
+  type.innerHTML = lostTxt;
+  textContainDiv.innerHTML = '';
+  textContainDiv.appendChild(type);
+
+}
+
+//"you lose" txt animation keyframe:
+// const loseMotion = ()=>{
+//   let ghostStrike = document.getElementsByClassName('.loseTxtContainer')
+//   ghostStrike.classList.toggle('animateLoser');
+// }
+
+
+
 
 //print 'You Win' to Screen via 'ghostContainer':
 const highScore = (winContent)=>{
@@ -138,6 +157,19 @@ const createGhost = ()=>{
       if (bottomMargin) {
         bottomMargin.style.marginTop = '-114px';
       }
+    };
+  
+    //hides graves on Game Over Screen for "you lose" txt without lack dot img to fit screen sizing issues for the 1st hideGraves function:
+    const hideGraves2 = () => {
+      let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5'];
+    
+      for (let i = 0; i < graveIds.length; i++) {
+        const element = document.querySelector(graveIds[i]);
+        if (element) {
+          element.setAttribute('src', '');
+        }
+      }
+     
     };
   
   
@@ -412,7 +444,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 100));
   //set to 18/20 or 34/40when finished:
-  if (randomChance >= 89){
+  if (randomChance >= 10){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
@@ -420,11 +452,15 @@ const ghostChanceAttack = ()=>{
     ghostAttack4();
     ghstAttkToScreen("GHOST ATTACK!");
     console.log("Ghost Attacked!");
+    hideGraves2();
+    setTimeout(()=>{
+      youLose("YOU LOSE");
+    }, 1500);
     setTimeout(GameOver, 1300);
     setTimeout(reloadGame, 2100);
-  
   }
 }
+
 
 //Print "Ghost Attack!" to 1stperson footer-bar during ghostAttack:
 const ghstAttkToScreen = (attackTxt)=>{

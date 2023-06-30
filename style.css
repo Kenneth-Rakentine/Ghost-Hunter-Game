@@ -386,6 +386,23 @@ z-index:3;
     transition:4.4s;
 }
 
+.loseTxtContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    width:450px;
+    margin-top:-170px;
+    font-size:80px;
+    color:rgb(22, 168, 78);
+    text-shadow:4px 6px 4px rgb(17, 66, 28);
+    font-weight:bold;
+    letter-spacing:8px;
+    z-index:2;
+    opacity:1;
+    transition:3.4s;
+}
+
 .playerOneButton{
     display:flex;
     text-align:center;
@@ -1553,3 +1570,31 @@ z-index:3;
     animation: ghostAttacker4 .5s ;
  
 }
+
+
+/* "YOU LOSE" Game Over Screen TEXT ANIMATION: */
+/* @keyframes youLoseTxtMove{
+    0%{
+
+    }
+
+    50%{
+        transform: translatex(-160px);
+        margin-left:300px;
+        opacity:.4;
+    }
+
+    60%{
+        transform: rotateX(15deg) rotateY(-15deg) scale(5);
+        opacity:.8;
+    }
+
+    100%{
+        transform: scale(10);
+        opacity:.3;
+    }
+    
+}
+.animateLoser{
+    animation: youLoseTxtMove 1.8s;
+} */

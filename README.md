@@ -8,6 +8,8 @@ A Duck Hunt-style first-person shooter with ghosts that takes place in a graveya
 
 Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn 55 points and you reach the High Score to win the game 
 
+Utilizes JS, HTML, & CSS only
+
 #### Screenshots
 
 ![screenshot 1](https://i.ibb.co/JxpZPpm/ghost-hunter-screenshot-1.png)
@@ -48,7 +50,7 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
  -HTML5
  ```
 
-#### Strech Goals:
+#### Roadmap:
 - [ ] Health Bar - depletes with each atack, triggers game over state
 - [ ] Title Sequence
 - [ ] Ammo guage (per level?)
