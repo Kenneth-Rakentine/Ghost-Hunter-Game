@@ -4,11 +4,11 @@
 ![alt text](https://i.imgur.com/0RFTHYm.jpg)
 
 # Ghost Hunter
-A Duck Hunt-style first-person shooter with ghosts that takes place in a graveyard throughout 3 levels + a Boss Level.
+A Duck Hunt-style first-person shooter built using html, css, & javascript featuring ghost enemies that takes place in a graveyard throughout 3 levels + a Boss Level.
 
 Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn 55 points and you reach the High Score to win the game 
 
-Utilizes JS, HTML, & CSS only
+
 
 #### Screenshots
 
@@ -17,8 +17,10 @@ Utilizes JS, HTML, & CSS only
 ![screenshot 2](https://i.ibb.co/VQBsdGv/ghost-hunter-screenshot-2.png)
 
 ### Instructions
-
+<sub>resize window to 888px for best interactive view</sub>
 _<sub>(click the audio player at the top of the screen to begin the game soundtrack)</sub>_
+
+
 
 Start by selecting your Player and then clicking the "Level 1" button. The ghosts will populate and begin to scatter. Your job is to aim as best as you can at the head and click to shoot. Each successful hit is an additional five points. The winning goal is 55 points. Once you defeat each ghost, bove onto the next round by clicking the follow "Level" button.
 
@@ -48,6 +50,7 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
  -Javascript
  -CSS
  -HTML5
+ -PS (for editing background images)
  ```
 
 #### Roadmap:
