@@ -6,7 +6,7 @@
 # Ghost Hunter
 A Duck Hunt-style first-person shooter with ghosts that takes place in a graveyard throughout 3 levels + a Boss Level.
 
-Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn 50 points and you reach the High Score to win the game 
+Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn 55 points and you reach the High Score to win the game 
 
 #### Screenshots
 
@@ -18,7 +18,7 @@ Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn
 
 _<sub>(click the audio player at the top of the screen to begin the game soundtrack)</sub>_
 
-Start by selecting your Player and then clicking the "Level 1" button. The ghosts will populate and begin to scatter. Your job is to aim as best as you can at the head and click to shoot. Each successful hit is an additional five points. The winning goal is 50 points. Once you defeat each ghost, bove onto the next round by clicking the follow "Level" button.
+Start by selecting your Player and then clicking the "Level 1" button. The ghosts will populate and begin to scatter. Your job is to aim as best as you can at the head and click to shoot. Each successful hit is an additional five points. The winning goal is 55 points. Once you defeat each ghost, bove onto the next round by clicking the follow "Level" button.
 
 The boss arrives in level four and is the final battle. Ghosts enemies can also attack back at the player. The will swoop in at the screen and inflict damage. ghosts can also evade your attacks by performing swift evasive maneuvers, shrinking, floating into the distance, vanishing, and hiding behind gravestones in the graveyard. Each hit is a lethal attack and results in a Game Over, at which point the player has the option to reset the game. At any point in the game, you can hit the "reset" button manually to clear the exising ghosts and levels and restart at level 1.
 

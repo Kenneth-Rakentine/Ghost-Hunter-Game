@@ -73,7 +73,7 @@ const highScore = (winContent)=>{
 
 //When score reaches 50, initiate WIN State:
 const winScore = () => {
-  if (score >= 50) {
+  if (score >= 55) {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 2000); 
@@ -204,7 +204,6 @@ const swapBkg3 = ()=>{
   ;
   
 };
-
 
 
 
@@ -411,9 +410,9 @@ const reloadGame = ()=>{
 
 //setup a math.random chance that "ghostAttack" function will initialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its newly created keyframe [and glassScreenBreak gif image appears?], in which case player 1 or 2 dies:
 const ghostChanceAttack = ()=>{
-  let randomChance = (generateRandomNum(0, 20));
+  let randomChance = (generateRandomNum(0, 40));
   //set to 18 when finished:
-  if (randomChance >= 18){
+  if (randomChance >= 34){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
@@ -448,7 +447,7 @@ const lvlToScreen = (currentLvlDisp)=>{
 }
 
 
-
+ 
 
 
 
