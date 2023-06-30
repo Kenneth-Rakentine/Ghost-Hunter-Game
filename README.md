@@ -47,8 +47,22 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
  -HTML5
 
 ###### A Strech Goals:
--Health Bar
+-Health Bar - depletes with each atack, triggers game over state
 -Title Sequence
--Ammo guage
+-Ammo guage (per level?)
 -Cleaner Animations
 -More accurate tracking and execution of "ghost hit" animation
+-Increase ghost retaliate/attk chance with each level
+-new ghost images per level
+-Per Player Score/Additional "Vs" multiplayer mode
+
+###### A Unsolved/To Be Accomplished
+-separate states per level/player
+-lightning gif overlay on boss level
+-specific remaining ghost attack function
+-responsive screen resize
+-ghost attack chance increases with time 
+-more detailed ghost shaking once attacked "rotate" keyframe animations
+-more evasive maneuvers from ghosts once hovered over
+-separate point value for boss enemy 
+-better foreground gravestone element sizing/placement

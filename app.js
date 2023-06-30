@@ -72,12 +72,15 @@ const highScore = (winContent)=>{
 }
 
 //When score reaches 50, initiate WIN State:
-const winScore = ()=>{
-if (score >= 50){
-  highScore("YOU WIN");
-  // setTimeout(highScore, 1000);
-} 
+const winScore = () => {
+  if (score >= 50) {
+    setTimeout(() => {
+      highScore("YOU WIN");
+    }, 2000); 
+  }
 };
+
+
 
 //display score in points to top statusBar via innerHTML
 //scoreDisplay = console.log(score):
@@ -386,6 +389,15 @@ const ghostAttack2 = ()=>{
   ghostStrike2.classList.toggle('attackPlayer2');
 }
 
+const ghostAttack3 = ()=>{
+  let ghostStrike3 = document.querySelector('#ghost3')
+  ghostStrike3.classList.toggle('attackPlayer3');
+}
+
+const ghostAttack4 = ()=>{
+  let ghostStrike4 = document.querySelector('#ghost4')
+  ghostStrike4.classList.toggle('attackPlayer4');
+}
 
 const GameOver = () => {
   // Create a new image element for the game over screen
@@ -417,17 +429,40 @@ const reloadGame = ()=>{
 
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 20));
-  //set to 19 when finished:
-  if (randomChance >= 18){
+  //set to 18 when finished:
+  if (randomChance >= 5){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
+    ghostAttack3();
+    ghostAttack4();
+    ghstAttkToScreen("GHOST ATTACK!");
     console.log("Ghost Attacked!");
     setTimeout(GameOver, 1300);
     setTimeout(reloadGame, 2100);
   
   }
 }
+
+//Print "Ghost Attack!" to 1stperson footer-bar during ghostAttack:
+const ghstAttkToScreen = (attackTxt)=>{
+  let lowBar = document.querySelector('.attackTxt')
+  let showAtk = document.createElement('div')
+  showAtk.classList.add('ghostAttackPrinter');
+  showAtk.innerHTML = attackTxt;
+  lowBar.innerHTML = '';
+
+  lowBar.appendChild(showAtk);
+}
+
+
+
+
+
+// const ghtAttkTxt = ()=>{
+//   let screener = document.querySelector('.attackTxt')
+
+// }
 
 
 
