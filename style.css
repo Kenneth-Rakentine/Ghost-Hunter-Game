@@ -1462,7 +1462,7 @@ z-index:3;
 
 
 .attackPlayer{
-    animation: ghostAttacker 1.2s ;
+    animation: ghostAttacker 1s ;
  
 }
 
@@ -1483,6 +1483,52 @@ z-index:3;
 }
 
 .attackPlayer2{
-    animation: ghostAttacker2 1.4s ;
+    animation: ghostAttacker2 1.3s ;
+ 
+}
+
+
+
+@keyframes ghostAttacker3 {
+    0%{
+
+    }
+    100%{
+        transform: scale(9.4);
+        opacity:.5;
+    }
+    
+}
+
+.attackPlayer3{
+    animation: ghostAttacker3 1.8s ;
+ 
+}
+
+@keyframes ghostAttacker4 {
+    0%{
+
+    }
+
+    50%{
+        transform: translatex(-160px);
+        margin-left:300px;
+        opacity:.4;
+    }
+
+    60%{
+        transform: rotateX(15deg) rotateY(-15deg) scale(5);
+        opacity:.8;
+    }
+
+    100%{
+        transform: scale(10);
+        opacity:.3;
+    }
+    
+}
+
+.attackPlayer4{
+    animation: ghostAttacker4 .5s ;
  
 }

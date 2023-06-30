@@ -430,7 +430,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 20));
   //set to 18 when finished:
-  if (randomChance >= 5){
+  if (randomChance >= 18){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
