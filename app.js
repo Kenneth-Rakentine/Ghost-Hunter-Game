@@ -459,10 +459,7 @@ const ghstAttkToScreen = (attackTxt)=>{
 
 
 
-// const ghtAttkTxt = ()=>{
-//   let screener = document.querySelector('.attackTxt')
 
-// }
 
 
 
