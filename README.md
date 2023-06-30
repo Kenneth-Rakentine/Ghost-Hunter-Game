@@ -62,14 +62,4 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 - [ ] Per Player Score/Additional "Vs" multiplayer mode
 
 ###### Unsolved/To Be Accomplished
--separate states per level/player
--lightning gif overlay on boss level
--specific remaining ghost attack function
--responsive screen resize
--ghost attack chance increases with time 
--more detailed ghost shaking once attacked "rotate" keyframe animations
--more evasive maneuvers from ghosts once hovered over
--separate point value for boss enemy 
--better foreground gravestone element sizing/placement
--change .ghosts z-index to above gravestones
--css flex ghostcontainer or individual ghost img elements to respond to page resize (and set game screen containers back to flexfrom "min/max-width")
+separate states per level/player, lightning gif overlay on boss level, specific remaining ghost attack function, responsive screen resize, ghost attack chance increases with time , more detailed ghost shaking once attacked "rotate" keyframe animations, more evasive maneuvers from ghosts once hovered over, separate point value for boss enemy , better foreground gravestone element sizing/placement, change .ghosts z-index to above gravestones, css flex ghostcontainer or individual ghost img elements to respond to page resize (and set game screen containers back to flexfrom "min/max-width")
