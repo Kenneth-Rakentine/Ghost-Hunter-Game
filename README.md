@@ -52,10 +52,11 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 
 #### Roadmap:
 - [ ] Health Bar - depletes with each atack, triggers game over state
-- [ ] Title Sequence
+- [x] Title Sequence
 - [ ] Ammo guage (per level?)
 - [ ] Cleaner Animations
 - [ ] More accurate tracking and execution of "ghost hit" animation
+- [x] display current level text on screen-status bar
 - [ ] Increase ghost retaliate/attk chance with each level
 - [ ] new ghost images per level
 - [ ] Per Player Score/Additional "Vs" multiplayer mode
@@ -71,3 +72,4 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 -separate point value for boss enemy 
 -better foreground gravestone element sizing/placement
 -change .ghosts z-index to above gravestones
+-css flex ghostcontainer or individual ghost img elements to respond to page resize (and set game screen containers back to flexfrom "min/max-width")

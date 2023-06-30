@@ -333,19 +333,6 @@ display:none;
     z-index:3;
 }
 
-/* .tree{
-display:flex;
-z-index:3;
-}
-
-.treeImg{
-display:flex;
-z-index:3;
-} */
-
-.foreground{
-
-}
 
 .firstPerson{
     display:flex;
@@ -367,6 +354,24 @@ z-index:3;
     z-index:4;
     height:900px;
     width:900px;
+}
+
+.gameTitleTxt{
+    display:block;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    width:450px;
+    margin-top:-170px;
+    margin-left:-140px;
+    font-size:90px;
+    color:rgb(109, 63, 105);
+    text-shadow:4px 6px 4px rgb(44, 9, 41);
+    font-weight:bold;
+    letter-spacing:8px;
+    z-index:2;
+    opacity:1;
+    transition:3.4s;
 }
 
 .winTxtContainer{

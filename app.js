@@ -320,8 +320,15 @@ const initGhosts = () => {
   });
 };
 
-//Initialize ghosts on page load - location.reload:
+//Initialize ghosts on page load:
 window.addEventListener("load", initGhosts);
+
+//display gameTitle on page load:
+window.addEventListener("load", ()=>{
+  gameTitle("Ghost Hunter");
+});
+
+
 
 //reset Button reloads screen:
 const resetButton = ()=>{
@@ -431,13 +438,22 @@ const GameOver = () => {
   gameScreen.setAttribute('src', 'https://pa1.aminoapps.com/7076/a912ff623fb056551339d87bec6b728c27d2c179r1-500-375_hq.gif');
 }
 
-  //reload? prompt":
+//display game title txt temporarily on reload:
+
+
+
+  //"reload?" prompt:
 const reloadGame = ()=>{
   let startOver = window.prompt("GAME OVER", "Reload?", "Purgatory");
   if (startOver === "Reload?"){
     location.reload();
   }
 };
+
+// _________________________________
+//Added health bar whih depletes with ghostChanceAttack up to 3 attacks before depleting, which triggers GameOver function:
+
+// _______________________________
 
 
 //setup a math.random chance that "ghostAttack" function will initialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its newly created keyframe [and glassScreenBreak gif image appears?], in which case player 1 or 2 dies:
@@ -469,10 +485,9 @@ const ghstAttkToScreen = (attackTxt)=>{
   showAtk.classList.add('ghostAttackPrinter');
   showAtk.innerHTML = attackTxt;
   lowBar.innerHTML = '';
-
   lowBar.appendChild(showAtk);
 }
-
+//Print current level txt to footer-bar:
 const lvlToScreen = (currentLvlDisp)=>{
   let footerDiv = document.querySelector('.attackTxt')
   let showLvl = document.createElement('div')
@@ -483,7 +498,19 @@ const lvlToScreen = (currentLvlDisp)=>{
 }
 
 
- 
+ //display game title on page load:
+const gameTitle = (title) =>{
+  let gamescreen2 = document.querySelector('.ghostContainer');
+  let titleText = document.createElement('div');
+  titleText.classList.add('gameTitleTxt')
+  titleText.innerHTML = title;
+  gamescreen2.appendChild(titleText);
+  //disappear after 4 seconds:
+  setTimeout(() => {
+    titleText.remove();
+  }, 4000);
+}
+
 
 
 
