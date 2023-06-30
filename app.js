@@ -134,7 +134,6 @@ const createGhost = ()=>{
   //replace 'ghosts' class w/Boss img to make BOSS ghost appear[for Lvl4Button function] by hiding ghosts class with display:none and changing ghost1 gif to new img/gif via #ghost1 id:
   const createBoss = ()=>{
     const ghosts = document.getElementsByClassName('ghosts');
-    const gravestoneElements = document.getElementsByClassName('gravestone');
     for (let i = 0; i < ghosts.length; i++) {
       ghosts[i].style.display = 'none';
     }
@@ -142,6 +141,7 @@ const createGhost = ()=>{
     ghost1.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2a2628-6126-4767-9684-0b5f75a06612/dd546ex-d5116361-3d5c-4aaa-8eb2-162626f7137f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMmEyNjI4LTYxMjYtNDc2Ny05Njg0LTBiNWY3NWEwNjYxMlwvZGQ1NDZleC1kNTExNjM2MS0zZDVjLTRhYWEtOGViMi0xNjI2MjZmNzEzN2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZYXqmKSpAzXuJUt0afhaAk6hISURCxcFkDTwjHq4CWo';
     ghost1.style.display = 'flex';
   };
+
     // hides gravestone img elements
     const hideGraves = () => {
       let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5'];
@@ -444,7 +444,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
   //set to 18/20 or 34/40 or 89/100 when finished:
-  if (randomChance > 485){
+  if (randomChance > 455){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
