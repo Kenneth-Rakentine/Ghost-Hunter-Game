@@ -68,3 +68,4 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 -more evasive maneuvers from ghosts once hovered over
 -separate point value for boss enemy 
 -better foreground gravestone element sizing/placement
+-change .ghosts z-index to above gravestones

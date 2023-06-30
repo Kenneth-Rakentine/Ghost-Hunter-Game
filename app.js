@@ -145,6 +145,7 @@ const createGhost = ()=>{
 const startButton = ()=>{
     // initGhosts();
     // hide2Ghosts();
+    lvlToScreen("LEVEL ONE");
     beginFloat();
     beginFloat2();
     beginFloat3();
@@ -153,6 +154,7 @@ const startButton = ()=>{
 
 const Lvl2Button = ()=>{
   swapBkg();
+  lvlToScreen("LEVEL TWO");
   initGhosts();
   begin2Float();
   begin2Float2();
@@ -162,6 +164,7 @@ const Lvl2Button = ()=>{
 
 const Lvl3Button = ()=>{
   swapBkg2();
+  lvlToScreen("LEVEL THREE");
   initGhosts();
   begin3Float();
   begin3Float2();
@@ -172,6 +175,7 @@ const Lvl3Button = ()=>{
 const Lvl4Button = ()=>{
   swapBkg3();
   createBoss();
+  lvlToScreen('');
   hideGraves();
   begin4Float();
   // begin4Float2();
@@ -244,15 +248,6 @@ document.addEventListener('mousemove', function(event) {
   }
 });
 
-
-
-
-// const ghostHit2 = () => {
-//   addPoints(5);
-//   console.log("+5 Points!");
-//   consoleToScreen(`PLAYER ${currentPlayer} SCORE: ${score}`)
-//   ghostChanceAttack2();
-// };
 
 //_________________________________________________________
 
@@ -411,22 +406,10 @@ const reloadGame = ()=>{
   if (startOver === "Reload?"){
     location.reload();
   }
-  //  else if (startOver === "next player"){
-  //   setTimeout(player2Turn, 2000);
-  // }
-  // setTimeout(() => {
-  //   location.reload();
-  // }, 2000);
 };
 
-//change ghost2 OR .ghosts z-index to 3/4(?):
-// const ghostAttackIndex = ()=>{
-// let ghost2 = document.querySelector('.gravestone')
-// ghost2.style.zIndex= '4';
-// }
 
-//setup a math.random chance that "ghostAttack" function will initiialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its (newly created) keyframe and glassScreenBreak gif image appears, in which case player 1 or 2 dies
-
+//setup a math.random chance that "ghostAttack" function will initialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its newly created keyframe [and glassScreenBreak gif image appears?], in which case player 1 or 2 dies:
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 20));
   //set to 18 when finished:
@@ -455,7 +438,14 @@ const ghstAttkToScreen = (attackTxt)=>{
   lowBar.appendChild(showAtk);
 }
 
-
+const lvlToScreen = (currentLvlDisp)=>{
+  let footerDiv = document.querySelector('.attackTxt')
+  let showLvl = document.createElement('div')
+  showLvl.classList.add('levelPrinter');
+  showLvl.innerHTML = currentLvlDisp;
+  footerDiv.innerHTML = '';
+  footerDiv.appendChild(showLvl);
+}
 
 
 
