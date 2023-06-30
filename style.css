@@ -356,6 +356,7 @@ display:none;
     width:900px;
 }
 
+/* __________________ */
 .gameTitleTxt{
     display:block;
     justify-content:center;
@@ -372,7 +373,16 @@ display:none;
     z-index:2;
     opacity:1;
     transition:3.4s;
+    animation-name: titleColor;
+    animation-duration: 3.8s;
 }
+@keyframes titleColor {
+    from {color: rgb(85, 39, 87); opacity: .3;}
+    to {color: rgb(62, 148, 83); opacity: 1;}
+  }
+
+
+/* __________________ */
 
 .winTxtContainer{
     display:flex;

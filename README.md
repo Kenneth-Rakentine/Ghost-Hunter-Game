@@ -17,7 +17,7 @@ Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn
 ![screenshot 2](https://i.ibb.co/VQBsdGv/ghost-hunter-screenshot-2.png)
 
 ### Instructions
-<sub>resize window to 888px for best interactive view</sub>
+<sub>resize window to '888px' for best interactive view</sub>
 _<sub>(click the audio player at the top of the screen to begin the game soundtrack)</sub>_
 
 
