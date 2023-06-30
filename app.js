@@ -76,7 +76,7 @@ const winScore = () => {
   if (score >= 55) {
     setTimeout(() => {
       highScore("YOU WIN");
-    }, 000); 
+    }, 300); 
   }
 };
 
