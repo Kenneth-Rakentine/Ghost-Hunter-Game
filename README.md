@@ -6,7 +6,7 @@
 # Ghost Hunter
 A Duck Hunt-style first-person shooter with ghosts that takes place in a graveyard throughout 3 levels + a Boss Level.
 
-Point-and-click to fire at the ghost's heads and earn +5 points per target. .Earn 50 points and you reach the High Score to win the game. 
+Point-and-click to fire at the ghost's heads and earn +5 points per target. Earn 50 points and you reach the High Score to win the game 
 
 #### Screenshots
 
@@ -28,19 +28,19 @@ This is a Two-player game. To switch players, select the "Player One" or "Player
 Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 
 ### Approach 
--Using buttons to initialize different sets of gohsts per level with keyframe animations
--Click events for ghost "hit" actions which perform a secondary animation via getElement functions
--Points are accumulated and reassigned to the Score variable as they are gained
--Math.random is used to provide a random number between 1 - 20 which provides the ghosts with a chance value that they will attack the player after every successful player point
--A ghost attack results in the Game Over function being called, which activates the "game over" & reload sequence where the game is reset automatically
--innerHtml is used to print score to screen according to which player is active 
--Each successive move is manually controlled by the human players and the game is 2-player co-op. User can activate each level function in order to continue to the next round of enemies and win the game
--Reset is also possible via manual control
--User will be prompted upon losing the game to restart via a windows prompt 
--Ghost movements get increasing more difficult to track and target as the rounds progress via keyframe animation sequences -Each event brought on by an eventListener (typically a click or onClick action) sets off a new sequence of functions that play out with user interaction until the level is complete, at which point the user has the option to manuyally progres to the next stage, allow player two to take over, or restart the game
--The game screen currently has a fixed width and is not responsive to window resizing 
++Using buttons to initialize different sets of gohsts per level with keyframe animations
++Click events for ghost "hit" actions which perform a secondary animation via getElement functions
++Points are accumulated and reassigned to the Score variable as they are gained
++Math.random is used to provide a random number between 1 - 20 which provides the ghosts with a chance value that they will attack the player after every successful player point
++A ghost attack results in the Game Over function being called, which activates the "game over" & reload sequence where the game is reset automatically
++innerHtml is used to print score to screen according to which player is active 
++Each successive move is manually controlled by the human players and the game is 2-player co-op. User can activate each level function in order to continue to the next round of enemies and win the game
++Reset is also possible via manual control
++User will be prompted upon losing the game to restart via a windows prompt 
++Ghost movements get increasing more difficult to track and target as the rounds progress via keyframe animation sequences +Each event brought on by an eventListener (typically a click or onClick action) sets off a new sequence of functions that play out with user interaction until the level is complete, at which point the user has the option to manuyally progres to the next stage, allow player two to take over, or restart the game
++The game screen currently has a fixed width and is not responsive to window resizing 
 
-#### Tech/Framework
+### Tech/Framework
  ***Built With:***
  ```
  -Javascript
@@ -48,7 +48,7 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
  -HTML5
  ```
 
-### Strech Goals:
+#### Strech Goals:
 - [ ] Health Bar - depletes with each atack, triggers game over state
 - [ ] Title Sequence
 - [ ] Ammo guage (per level?)
