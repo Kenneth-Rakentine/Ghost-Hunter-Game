@@ -175,7 +175,7 @@ const Lvl3Button = ()=>{
 const Lvl4Button = ()=>{
   swapBkg3();
   createBoss();
-  lvlToScreen('');
+  lvlToScreen('BOSS LEVEL');
   hideGraves();
   begin4Float();
   // begin4Float2();
