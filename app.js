@@ -442,9 +442,9 @@ const reloadGame = ()=>{
 
 //setup a math.random chance that "ghostAttack" function will initialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its newly created keyframe [and glassScreenBreak gif image appears?], in which case player 1 or 2 dies:
 const ghostChanceAttack = ()=>{
-  let randomChance = (generateRandomNum(0, 100));
-  //set to 18/20 or 34/40when finished:
-  if (randomChance >= 10){
+  let randomChance = (generateRandomNum(0, 500));
+  //set to 18/20 or 34/40 or 89/100 when finished:
+  if (randomChance > 485){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
