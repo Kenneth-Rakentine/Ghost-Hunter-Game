@@ -56,7 +56,7 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 #### Roadmap:
 - [ ] Health Bar - depletes with each atack, triggers game over state
 - [x] Title Sequence
-- [ ] Ammo guage (per level?)
+- [ ] Ammo gauge (per level?)
 - [ ] Cleaner Animations
 - [ ] More accurate tracking and execution of "ghost hit" animation
 - [x] display current level text on screen-status bar
