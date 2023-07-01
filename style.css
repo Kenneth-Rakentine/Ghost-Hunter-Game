@@ -4,6 +4,32 @@ a {cursor: url('https://raw.githubusercontent.com/coob113/fancy-cursors/master/t
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.topper{
+display:flex;
+background-color: rgb(32, 31, 31);
+max-width:860px;
+border-radius:4px;
+}
+
+.clickPlayTxt{
+    display:flex;
+    color:rgb(87, 78, 78);
+    align-self:center;
+    align-items:center;
+    background-color: rgb(44, 41, 41);
+    border-radius: 8px;
+    height:15px;
+    /* width:10%; */
+    font-size:12px;
+    margin-top:8px;
+    text-align:center;
+    font-weight:bolder;
+}
+
+.playerr{
+    background-color: rgb(32, 31, 31);
+
+}
 
 .statusBar{
     display:flex;
