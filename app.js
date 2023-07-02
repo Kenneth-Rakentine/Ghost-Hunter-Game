@@ -40,21 +40,23 @@ let isPlayerTwo = false;
 //create score variable which adds points per every ghostHit/ghostClick:
 let score = 0;
 const addPoints = (points) => {
-  score += points;
-  winScore();
+  score += points
+  updateScore(score)
+  winScore()
 };
 console.log(addPoints)
 const scoreDisplay = ()=>{
-    console.log(score);
+    console.log(score)
 }
 let score2 = 0;
 const addPoints2 = (points2) => {
-  score2 += points2;
-  winScore();
+  score2 += points2
+  updateScore(score2)
+  winScore()
 };
 console.log(addPoints2)
 const scoreDisplay2 = ()=>{
-    console.log(score2);
+    console.log(score2)
 }
 
 
@@ -100,13 +102,90 @@ const winScore = () => {
 };
 
 
+//display next round button animation when score reaches certain amount to signify current level is over:
+const btnThrob = (element) => {
+  element.classList.add('throbbing')
+}
+
+const stopbtnThrob = (element) => {
+  element.classList.remove('throbbing')
+}
+
+
+const nextLvlOne = () => {
+  let startButton = document.querySelector('.startButton')
+
+  if (score === 0) {
+    btnThrob(startButton)
+  }
+  startButton.addEventListener('click', () => {
+    stopbtnThrob(startButton)
+  })
+}
+
+const nxtLvlTwo = () => {
+  let level2Button = document.querySelector('.level2Button');
+  if (score === 10) {
+    btnThrob(level2Button)
+  }
+  level2Button.addEventListener('click', () => {
+    stopbtnThrob(level2Button)
+  })
+}
+
+const nxtLvlThree = () => {
+  let level3Button = document.querySelector('.level3Button')
+
+  if (score === 25) {
+    btnThrob(level3Button)
+  }
+  level3Button.addEventListener('click', () => {
+    stopbtnThrob(level3Button)
+  })
+}
+
+const nxtLvlFour = () => {
+  let level4Button = document.querySelector('.level4Button');
+  if (score === 45) {
+    btnThrob(level4Button)
+  }
+  level4Button.addEventListener('click', () => {
+    stopbtnThrob(level4Button)
+  })
+}
+
+const nxtLvlReset = () => {
+  let resetButton = document.querySelector('.resetButton');
+  if (score === 50) {
+    btnThrob(resetButton)
+  }
+  resetButton.addEventListener('click', () => {
+    stopbtnThrob(resetButton)
+  })
+}
+
+const updateScore = (newScore) => {
+  score = newScore;
+  nextLvlOne();
+  nxtLvlTwo();
+  nxtLvlThree();
+  nxtLvlFour();
+  nxtLvlReset();
+}
+nextLvlOne();
+nxtLvlTwo();
+nxtLvlThree();
+nxtLvlFour();
+nxtLvlReset();
+
+
 
 //display score in points to top statusBar via innerHTML
 //scoreDisplay = console.log(score):
 const consoleToScreen = (content)=>{
     let screen = document.querySelector('.playerScores')
     let printer = document.createElement('div')
-    printer.classList.add('scoreDisplay');
+    printer.classList.add('scoreDisplay')
     printer.innerHTML = content;
     screen.innerHTML = '';
 
@@ -115,14 +194,14 @@ const consoleToScreen = (content)=>{
 
 //make ghost appear from empty img div (from css .ghostContainer display:none either onclick=start button OR setTimeout from page refresh)
 const createGhost = ()=>{
-    const ghostContainer = document.querySelector('.ghostContainer');
-    const ghostImage = document.createElement('img');
-    ghostImage.src = '';
-    ghostImage.classList.add('ghostContainerAppear');
+    const ghostContainer = document.querySelector('.ghostContainer')
+    const ghostImage = document.createElement('img')
+    ghostImage.src = ''
+    ghostImage.classList.add('ghostContainerAppear')
     
     ghostImage.onclick = ghostClick;
 
-    ghostContainer.appendChild(ghostImage);
+    ghostContainer.appendChild(ghostImage)
     
     ghostContainer.style.display = 'flex';
   }
@@ -137,7 +216,7 @@ const createGhost = ()=>{
     for (let i = 0; i < ghosts.length; i++) {
       ghosts[i].style.display = 'none';
     }
-    const ghost1 = document.getElementById('ghost1');
+    const ghost1 = document.getElementById('ghost1')
     ghost1.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2a2628-6126-4767-9684-0b5f75a06612/dd546ex-d5116361-3d5c-4aaa-8eb2-162626f7137f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMmEyNjI4LTYxMjYtNDc2Ny05Njg0LTBiNWY3NWEwNjYxMlwvZGQ1NDZleC1kNTExNjM2MS0zZDVjLTRhYWEtOGViMi0xNjI2MjZmNzEzN2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZYXqmKSpAzXuJUt0afhaAk6hISURCxcFkDTwjHq4CWo';
     ghost1.style.display = 'flex';
   };

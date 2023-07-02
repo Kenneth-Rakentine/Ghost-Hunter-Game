@@ -72,121 +72,174 @@ box-shadow:-3px -6px 25px rgb(129, 128, 128);
     transition-delay:50ms;
 }
 
-.startButton{
-    display:flex;
-    text-align:center;
-    height:20px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(150, 29, 39);
-    color:rgb(238, 212, 218);
-    font-weight:bold;
-    z-index:2;
-    cursor:pointer;
-    border-radius: 4px;
-}
-.startButton:hover{
-    display:flex;
-    text-align:center;
-    height:22px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(163, 77, 98);
-    z-index:2;
-    cursor:pointer;
-    box-shadow: -.5px 4.5px 8px rgb(116, 54, 68);
-    opacity:.7;
-    transition-delay:50ms;
-}
+.resetButton.throbbing {
+    animation: throbbingReset 1s infinite;
+  }
 
-.level2Button{
-    display:flex;
-    text-align:center;
-    height:20px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(150, 29, 39);
-    color:rgb(238, 212, 218);
-    font-weight:bold;
-    z-index:2;
-    cursor:pointer;
-    border-radius: 4px;
-}
-.level2Button:hover{
-    display:flex;
-    text-align:center;
-    height:22px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(163, 77, 98);
-    z-index:2;
-    cursor:pointer;
-    box-shadow: -.5px 4.5px 8px rgb(116, 54, 68);
-    opacity:.7;
-    transition-delay:50ms;
-}
+  @keyframes throbbingReset {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 5px 5px rgb(50, 105, 64);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
-.level3Button{
-    display:flex;
-    text-align:center;
-    height:20px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(150, 29, 39);
-    color:rgb(238, 212, 218);
-    font-weight:bold;
-    z-index:2;
-    cursor:pointer;
-    border-radius: 4px;
-}
-.level3Button:hover{
-    display:flex;
-    text-align:center;
-    height:22px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(163, 77, 98);
-    z-index:2;
-    cursor:pointer;
-    box-shadow: -.5px 4.5px 8px rgb(116, 54, 68);
-    opacity:.7;
-    transition-delay:50ms;
-}
 
-.level4Button{
-    display:flex;
-    text-align:center;
-    height:20px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(150, 29, 39);
-    color:rgb(238, 212, 218);
-    font-weight:bold;
-    z-index:2;
-    cursor:pointer;
+.startButton {
+    display: flex;
+    text-align: center;
+    height: 20px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(150, 29, 39);
+    color: rgb(238, 212, 218);
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
     border-radius: 4px;
-}
-.level4Button:hover{
-    display:flex;
-    text-align:center;
-    height:22px;
-    width:65px;
-    margin-top:14px;
-    margin-left:14px;
-    background-color:rgb(163, 77, 98);
-    z-index:2;
-    cursor:pointer;
-    box-shadow: -.5px 4.5px 8px rgb(116, 54, 68);
-    opacity:.7;
-    transition-delay:50ms;
-}
+  }
+  
+  .startButton:hover {
+    display: flex;
+    text-align: center;
+    height: 22px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(163, 77, 98);
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: -0.5px 4.5px 8px rgb(116, 54, 68);
+    opacity: 0.7;
+    transition-delay: 50ms;
+    animation:none;
+  }
+  
+  .startButton.throbbing {
+    animation: throbbing 1s infinite;
+  }
+  
+  .level2Button {
+    display: flex;
+    text-align: center;
+    height: 20px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(150, 29, 39);
+    color: rgb(238, 212, 218);
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .level2Button:hover {
+    display: flex;
+    text-align: center;
+    height: 22px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(163, 77, 98);
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: -0.5px 4.5px 8px rgb(116, 54, 68);
+    opacity: 0.7;
+    transition-delay: 50ms;
+    animation:none;
+  }
+  
+  .level2Button.throbbing {
+    animation: throbbing 1s infinite;
+  }
+  
+  .level3Button {
+    display: flex;
+    text-align: center;
+    height: 20px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(150, 29, 39);
+    color: rgb(238, 212, 218);
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .level3Button:hover {
+    display: flex;
+    text-align: center;
+    height: 22px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(163, 77, 98);
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: -0.5px 4.5px 8px rgb(116, 54, 68);
+    opacity: 0.7;
+    transition-delay: 50ms;
+  }
+  
+  .level3Button.throbbing {
+    animation: throbbing 1s infinite;
+  }
+  
+  .level4Button {
+    display: flex;
+    text-align: center;
+    height: 20px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(150, 29, 39);
+    color: rgb(238, 212, 218);
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .level4Button:hover {
+    display: flex;
+    text-align: center;
+    height: 22px;
+    width: 65px;
+    margin-top: 14px;
+    margin-left: 14px;
+    background-color: rgb(163, 77, 98);
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: -0.5px 4.5px 8px rgb(116, 54, 68);
+    opacity: 0.7;
+    transition-delay: 50ms;
+  }
+  
+  .level4Button.throbbing {
+    animation: throbbing 1s infinite;
+  }
+  
+  @keyframes throbbing {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 5px 4.6px rgb(202, 59, 59);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 .playerScores{
     display:flex;
@@ -410,6 +463,25 @@ display:none;
 
 
 /* __________________ */
+
+
+.lvlOneTxtContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    width:450px;
+    margin-top:-170px;
+    font-size:80px;
+    color:rgb(168, 22, 22);
+    /* text-shadow:4px 6px 4px rgb(201, 45, 45); */
+    font-weight:bold;
+    letter-spacing:4px;
+    z-index:2;
+    opacity:1;
+    transition:4.4s;
+}
+
 
 .winTxtContainer{
     display:flex;
