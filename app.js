@@ -103,18 +103,16 @@ const winScore = () => {
 
 
 //display next round button animation when score reaches certain amount to signify current level is over:
-const btnThrob = (element) => {
-  element.classList.add('throbbing')
+const btnThrob = (nxtBtn) => {
+  nxtBtn.classList.add('throbbing')
 }
-
-const stopbtnThrob = (element) => {
-  element.classList.remove('throbbing')
+const stopbtnThrob = (nxtBtn) => {
+  nxtBtn.classList.remove('throbbing')
 }
 
 
 const nextLvlOne = () => {
   let startButton = document.querySelector('.startButton')
-
   if (score === 0) {
     btnThrob(startButton)
   }
@@ -135,7 +133,6 @@ const nxtLvlTwo = () => {
 
 const nxtLvlThree = () => {
   let level3Button = document.querySelector('.level3Button')
-
   if (score === 25) {
     btnThrob(level3Button)
   }
@@ -164,6 +161,7 @@ const nxtLvlReset = () => {
   })
 }
 
+//update score variable eacb time addPoints is called: 
 const updateScore = (newScore) => {
   score = newScore;
   nextLvlOne();
@@ -172,6 +170,7 @@ const updateScore = (newScore) => {
   nxtLvlFour();
   nxtLvlReset();
 }
+
 nextLvlOne();
 nxtLvlTwo();
 nxtLvlThree();
@@ -332,7 +331,7 @@ const currentPlayerOne = ()=>{
 }
 
 
-//each successful hit is +5 points added to the Score, consoleToScreen logged in statusBar:
+//each successful hit is +5 points added to the Score, consoleToScreen prints current score to statusBar:
 const ghostHit = () => {
   if (isPlayerTwo) {
     addPoints(5);
@@ -348,7 +347,7 @@ const ghostHit = () => {
 };
 
 // _________________________________________________________
-//player 2 turn:
+//player 2 turn (cursor swap):
 
 document.addEventListener('mousemove', function(event) {
   if (isPlayerTwo) {
