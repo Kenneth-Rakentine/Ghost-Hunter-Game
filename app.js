@@ -28,6 +28,15 @@ Your browser does not support the audio element.
 //!!!! REMEMBER TO GIT COMMIT OFTEN WITH -m MESSAGE CHANEGS UPDATES !!!!
 //readme file **
 
+
+window.onload = playAudio()
+
+function playAudio() {
+  let audio = new Audio("Music/09 No Evidence.mp3");
+  audio.volume = 0.2
+  audio.play();
+}
+
 //Chance of Ghost Attack Random Generation:
 const generateRandomNum = (min, max)=>{
   let rand = Math.floor(Math.random() * (max - min) + min);
@@ -94,7 +103,7 @@ const highScore = (winContent)=>{
 
 //When score reaches 50, initiate WIN State:
 const winScore = () => {
-  if (score >= 55) {
+  if (score >= 50) {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 300); 
