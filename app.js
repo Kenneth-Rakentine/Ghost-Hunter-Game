@@ -305,11 +305,19 @@ const Lvl4Button = ()=>{
   createBoss();
   lvlToScreen('BOSS LEVEL');
   hideGraves();
+  thunderSound();
   begin4Float();
   // begin4Float2();
   // begin4Float3();
   // begin4Float4();
 }
+
+const thunderSound = ()=>{
+  let storm = new Audio('Music/8d82b5_Thunderstorm_Sound_Effect.mp3')
+  storm.volume = 0.3
+  storm.play()
+}
+
 
 
 //switch out background image per levels 2, 3, & 4 via "lvl_button"s:
@@ -575,7 +583,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
   //set to 18/20 or 34/40 or 89/100 or 446/500 when finished:
-  if (randomChance > 500){
+  if (randomChance > 446){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
