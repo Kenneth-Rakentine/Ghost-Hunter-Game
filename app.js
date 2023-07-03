@@ -18,7 +18,7 @@ Your browser does not support the audio element.
 //points populate on tip "navBar"(where p1&p2 titles are) OR footer status bar(maybe other messager [innerHTML + removeChild/appendChild])
 //takes turns between Win & Lose state (p1 human vs p2 pc)
 //p2 turn will play out with red cursor(img), just quicker (setTimeout?) gif death animation, then point assignment via atack strength OR with ghosts attacking p1 back until p1 health diminishes and dies
-//RESET button (Refresh the page = location.reload();
+//RESET button - Refresh the page = location.reload();
 //DEATH event: enemy attacks back successfully
 //Ammo quantity bar in top status bar
 //ALTERNATE LOSE STATE: run out of ammo
@@ -109,8 +109,15 @@ const winScore = () => {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 300); 
+   setTimeout(winSound, 200)
   }
 };
+
+const winSound = ()=>{
+  let brightMetal = new Audio('Music/bright metal.mp3')
+  brightMetal.volume = 0.6
+  brightMetal.play()
+}
 
 
 //display next round button animation when score reaches certain amount to signify current level is over:
@@ -409,6 +416,7 @@ const ghostClick = (event) => {
     splat.play()
   }
 
+ 
 
 
 //use setTimeOut to delay each ghost: 
@@ -567,12 +575,13 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
   //set to 18/20 or 34/40 or 89/100 or 446/500 when finished:
-  if (randomChance > 446){
+  if (randomChance > 500){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
     ghostAttack3();
     ghostAttack4();
+    attackSound();
     ghstAttkToScreen("GHOST ATTACK!");
     console.log("Ghost Attacked!");
     hideGraves2();
@@ -583,6 +592,13 @@ const ghostChanceAttack = ()=>{
     setTimeout(reloadGame, 2100);
   }
 }
+
+const attackSound = ()=>{
+  let metalShriek = new Audio('Music/free-sound-1675031263.mp3')
+  metalShriek.volume = 0.6
+  metalShriek.play()
+}
+
 
 
 //Print "Ghost Attack!" to 1stperson footer-bar during ghostAttack:
