@@ -28,13 +28,14 @@ Your browser does not support the audio element.
 //!!!! REMEMBER TO GIT COMMIT OFTEN WITH -m MESSAGE CHANEGS UPDATES !!!!
 //readme file **
 
-
+//autplay background mp3 onload - comment out line 37 [(audio.play)]:
 window.onload = playAudio()
 
 function playAudio() {
   let audio = new Audio("Music/09 No Evidence.mp3");
-  audio.volume = 0.2
-  audio.play();
+  audio.volume = 0.1
+  // audio.play();
+
 }
 
 //Chance of Ghost Attack Random Generation:
@@ -386,10 +387,16 @@ const ghostClick = (event) => {
       shotGif.parentNode.removeChild(shotGif);
       clickedGhost.style.display = 'none';  
       ghostHit();
+      playGunshot(); 
       console.log('ghost clicked');
     }, 400);
 
   };
+
+  const playGunshot =()=>{
+    let akmp3 = new Audio('Music/Ak47GunShotSilenc PE1098301_preview.mp3')
+    akmp3.play()
+  }
 
 //use setTimeOut to delay each ghost: 
 const ghostAppearDelay = 1500;
