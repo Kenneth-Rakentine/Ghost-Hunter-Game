@@ -38,6 +38,7 @@ function playAudio() {
 
 }
 
+//
 //Chance of Ghost Attack Random Generation:
 const generateRandomNum = (min, max)=>{
   let rand = Math.floor(Math.random() * (max - min) + min);
