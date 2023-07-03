@@ -384,11 +384,14 @@ const ghostClick = (event) => {
 
     clickedGhost.parentNode.insertBefore(shotGif, clickedGhost.nextSibling);
   
+    playGunshot(); 
+    setTimeout(splatterSound, 100);
+    
+
     setTimeout(() => {
       shotGif.parentNode.removeChild(shotGif);
       clickedGhost.style.display = 'none';  
       ghostHit();
-      playGunshot(); 
       console.log('ghost clicked');
     }, 400);
 
@@ -396,14 +399,23 @@ const ghostClick = (event) => {
 
   const playGunshot =()=>{
     let akmp3 = new Audio('Music/Ak47GunShotSilenc PE1098301_preview.mp3')
+    akmp3.volume = 0.3;
     akmp3.play()
   }
+
+  const splatterSound = ()=>{
+    let splat = new Audio('Music/Wet Smack 2.wav')
+    splat.volume = 0.4
+    splat.play()
+  }
+
+
 
 //use setTimeOut to delay each ghost: 
 const ghostAppearDelay = 1500;
 const initGhosts = () => {
   const ghosts = document.querySelectorAll(".ghosts");
-  let delay = 0;
+  let delay = 1000;
   
   ghosts.forEach((ghost, ghostList) => {
     setTimeout(() => {
