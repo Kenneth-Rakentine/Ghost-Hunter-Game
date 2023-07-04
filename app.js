@@ -105,7 +105,7 @@ const highScore = (winContent)=>{
 
 //When score reaches 50, initiate WIN State:
 const winScore = () => {
-  if (score >= 50) {
+  if (score >= 55) {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 300); 
