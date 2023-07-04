@@ -1,77 +1,127 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Ghost Hunter</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-<body>
-      
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ghost Hunter</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!--play scary ghost trap mp3-->
     <div class="topper">
-    <iframe frameborder="0" width="400" height="45" src="https://drive.google.com/file/d/1sgxbr4KKxuRIL-SMdKJgBjLnY3WfNYnt/preview" allow="autoplay" style="display:internal" class="playerr"></iframe>
-    <div class="clickPlayTxt">Play Audio</div>
-    </div> 
-  
+      <iframe
+        frameborder="0"
+        width="400"
+        height="45"
+        src="https://drive.google.com/file/d/1sgxbr4KKxuRIL-SMdKJgBjLnY3WfNYnt/preview"
+        allow="autoplay"
+        style="display: internal"
+        class="playerr"
+      ></iframe>
+      <div class="clickPlayTxt">Play Audio</div>
+    </div>
 
-    
-        <!--navBar Game Status: P1 left - P2 right, score, innerHTML pop messages-->
-        <div class="statusBar">
-            <button class="resetButton" onclick="resetButton()">Reset</button>
-            <button class="startButton" onclick="startButton()">Level 1</button>
-            <button class="level2Button" onclick="Lvl2Button()">Level 2</button>
-            <button class="level3Button" onclick="Lvl3Button()">Level 3</button>
-            <button class="level4Button" onclick="Lvl4Button()">Level 4</button>
+    <!--navBar Game Status: P1 left - P2 right, score, innerHTML pop messages-->
+    <div class="statusBar">
+      <button class="resetButton" onclick="resetButton()">Reset</button>
+      <button class="startButton" onclick="startButton()">Level 1</button>
+      <button class="level2Button" onclick="Lvl2Button()">Level 2</button>
+      <button class="level3Button" onclick="Lvl3Button()">Level 3</button>
+      <button class="level4Button" onclick="Lvl4Button()">Level 4</button>
 
-            <div class="playerScores">SCORE</div>
-            
+      <div class="playerScores">SCORE</div>
+    </div>
+    <!--mainScreen (contains 3 inner layers: background/middle barrier "bushes"/foreground)-->
+    <div class="mainScreen">
+      <!--background graveyard main image-->
+      <div class="backGround">
+        <img
+          src="https://cutewallpaper.org/21/graveyard-hd/Wallpaper-mist-graveyard-katarinakyrka-3408x2280-.jpg"
+          alt=""
+          class="graveyard"
+        />
+
+        <!--ghost container div-->
+        <div class="ghostContainer">
+          <img
+            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWwwNGo2MjM3eW53OGViZzRyNWNsOWpnYWRxcHRhemIwaDJsdnZ3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/7281x5yOLwyiRqWAM7/giphy.gif"
+            alt=""
+            class="ghosts"
+            id="ghost1"
+          />
+          <img
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW1sZjByeGV3cnM2b3J2OHZvOGdxbXloa2R2MHdpaGMzZTRhcHc1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/H2NDDH9U2AdKhvyaaS/giphy.gif"
+            alt=""
+            class="ghosts"
+            id="ghost2"
+          />
+          <img
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3UxcTV3Nm5mZXk1ZXFma2VoNnBrbXBzcmI3bnVzN29jbzIzNHZ4cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/44qD3D2KgEymA/giphy.gif"
+            alt=""
+            class="ghosts"
+            id="ghost3"
+          />
+          <img
+            src="https://img1.picmix.com/output/stamp/normal/5/9/7/9/1549795_3bfe0.gif"
+            alt=""
+            class="ghosts"
+            id="ghost4"
+          />
         </div>
-        <!--mainScreen (contains 3 inner layers: background/middle barrier "bushes"/foreground)-->
-        <div class="mainScreen">
-            <!--background graveyard main image-->
-            <div class="backGround">
-                <img src="https://cutewallpaper.org/21/graveyard-hd/Wallpaper-mist-graveyard-katarinakyrka-3408x2280-.jpg" alt="" class="graveyard">
-                
-            <!--ghost container div-->
-                <div class="ghostContainer">
-                    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWwwNGo2MjM3eW53OGViZzRyNWNsOWpnYWRxcHRhemIwaDJsdnZ3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/7281x5yOLwyiRqWAM7/giphy.gif" alt="" class="ghosts" id="ghost1">
-                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW1sZjByeGV3cnM2b3J2OHZvOGdxbXloa2R2MHdpaGMzZTRhcHc1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/H2NDDH9U2AdKhvyaaS/giphy.gif" alt="" class="ghosts" id="ghost2">
-                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3UxcTV3Nm5mZXk1ZXFma2VoNnBrbXBzcmI3bnVzN29jbzIzNHZ4cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/44qD3D2KgEymA/giphy.gif" alt="" class="ghosts" id="ghost3">
-                    <img src="https://img1.picmix.com/output/stamp/normal/5/9/7/9/1549795_3bfe0.gif" alt="" class="ghosts" id="ghost4">
-                </div>
 
-                <!-- gravestone foreground barrier for enemy shield (do not use grave 3)-->
-                <div class="stoneContainer">
-                     <img src="https://openseauserdata.com/files/bb7a8bf92a9bff902d1216040d344ad6.gif" alt="" class="gravestone" id="grave1">
-                    <img src="https://media.giphy.com/avatars/Crea_vid/lUAEGnccTxU0.gif" alt="" class="gravestone" id="grave2">
-                    <!-- <img src="https://thumbs.gfycat.com/RealisticBountifulIrrawaddydolphin.webp" alt="" class="gravestone" id="grave3"> -->
-                     <img src="https://64.media.tumblr.com/tumblr_mbtmansw4x1rfjowdo1_500.gif" alt="" class="gravestone" id="grave4">
-                     <img src="https://thumbs.gfycat.com/AdmirableFlimsyDeermouse-max-1mb.gif" alt="" class="gravestone" id="grave5">
-                </div>
-                <!-- <div class="tree">
+        <!-- gravestone foreground barrier for enemy shield (do not use grave 3)-->
+        <div class="stoneContainer">
+          <img
+            src="https://openseauserdata.com/files/bb7a8bf92a9bff902d1216040d344ad6.gif"
+            alt=""
+            class="gravestone"
+            id="grave1"
+          />
+          <img
+            src="https://media.giphy.com/avatars/Crea_vid/lUAEGnccTxU0.gif"
+            alt=""
+            class="gravestone"
+            id="grave2"
+          />
+          <!-- <img src="https://thumbs.gfycat.com/RealisticBountifulIrrawaddydolphin.webp" alt="" class="gravestone" id="grave3"> -->
+          <img
+            src="https://64.media.tumblr.com/tumblr_mbtmansw4x1rfjowdo1_500.gif"
+            alt=""
+            class="gravestone"
+            id="grave4"
+          />
+          <img
+            src="https://thumbs.gfycat.com/AdmirableFlimsyDeermouse-max-1mb.gif"
+            alt=""
+            class="gravestone"
+            id="grave5"
+          />
+        </div>
+        <!-- <div class="tree">
                     <img src="https://www.pngfind.com/mpng/hJhbih_dead-tree-png-tree-transparent-png/" alt="" class="treeImg">
                 </div> -->
-            </div>
-            <!-- <img src="" alt="" class="breakGlassImg"> -->
-            <div class="foreGround"></div>
-            <div class="nxtRound"></div>
-        </div>
+      </div>
+      <!-- <img src="" alt="" class="breakGlassImg"> -->
+      <div class="foreGround"></div>
+      <div class="nxtRound"></div>
+    </div>
 
-        <!--bottom/footer bar - 1st Person Perspective layer ("gun"/hands/cursor target)-->
+    <!--bottom/footer bar - 1st Person Perspective layer ("gun"/hands/cursor target)-->
 
-       <div class="firstPerson">
-        <button class="playerOneButton" onclick="currentPlayerOne()">Player 1</button>
-            <button class="playerTwoButton" onclick="currentPlayerTwo()">Player 2</button>
-            <!-- <div class="playerState"></div> -->
-            <div class="attackTxt"></div>
-       </div>
+    <div class="firstPerson">
+      <button class="playerOneButton" onclick="currentPlayerOne()">
+        Player 1
+      </button>
+      <button class="playerTwoButton" onclick="currentPlayerTwo()">
+        Player 2
+      </button>
+      <!-- <div class="playerState"></div> -->
+      <div class="attackTxt"></div>
+    </div>
 
-     
-        
-        <script src="app.js" async defer></script>
-</body>
+    <script src="app.js" async defer></script>
+  </body>
 </html>

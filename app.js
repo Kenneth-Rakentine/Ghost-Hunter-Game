@@ -314,7 +314,7 @@ const Lvl4Button = ()=>{
 
 const thunderSound = ()=>{
   let storm = new Audio('Music/8d82b5_Thunderstorm_Sound_Effect.mp3')
-  storm.volume = 0.3
+  storm.volume = 0.6
   storm.play()
 }
 
@@ -400,7 +400,7 @@ const ghostClick = (event) => {
     clickedGhost.parentNode.insertBefore(shotGif, clickedGhost.nextSibling);
   
     playGunshot(); 
-    setTimeout(splatterSound, 100);
+    setTimeout(splatterSound, 60);
     
 
     setTimeout(() => {
@@ -583,7 +583,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
   //set to 18/20 or 34/40 or 89/100 or 446/500 when finished:
-  if (randomChance > 446){
+  if (randomChance > 480){
     // ghostAttackIndex();
     ghostAttack();
     ghostAttack2();
