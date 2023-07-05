@@ -105,7 +105,7 @@ const highScore = (winContent)=>{
 
 //When score reaches 50, initiate WIN State:
 const winScore = () => {
-  if (score >= 55) {
+  if (score >= 60) {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 300); 
@@ -400,7 +400,7 @@ const ghostClick = (event) => {
     clickedGhost.parentNode.insertBefore(shotGif, clickedGhost.nextSibling);
   
     playGunshot(); 
-    setTimeout(splatterSound, 60);
+    setTimeout(splatterSound, 90);
     
 
     setTimeout(() => {
