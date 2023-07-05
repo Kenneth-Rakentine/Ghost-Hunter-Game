@@ -255,7 +255,7 @@ box-shadow:-3px -6px 25px rgb(129, 128, 128);
     letter-spacing:.8px;
     background-color:rgb(104, 105, 103);
     border-radius: 4px;
-    box-shadow:2.4px 2.9px 4px rgb(58, 59, 58);
+    box-shadow: inset 2.4px 2.9px 4px rgb(58, 59, 58);
    
 }
 
@@ -625,7 +625,7 @@ display:none;
     letter-spacing:.8px;
     background-color:rgb(104, 105, 103);
     border-radius: 4px;
-    box-shadow:2.4px 2.9px 4px rgb(58, 59, 58);
+    box-shadow: inset 2.4px 2.9px 4px rgb(58, 59, 58);
   }
 
 

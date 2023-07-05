@@ -103,9 +103,9 @@ const highScore = (winContent)=>{
   winScreen.appendChild(printer);
 }
 
-//When score reaches 50, initiate WIN State:
+//When score reaches 55, initiate WIN State:
 const winScore = () => {
-  if (score >= 60) {
+  if (score >= 55) {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 300); 
