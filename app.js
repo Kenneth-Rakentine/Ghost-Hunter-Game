@@ -314,7 +314,7 @@ const Lvl4Button = ()=>{
 
 const thunderSound = ()=>{
   let storm = new Audio('Music/8d82b5_Thunderstorm_Sound_Effect.mp3')
-  storm.volume = 0.6
+  storm.volume = 0.7
   storm.play()
 }
 
