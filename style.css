@@ -289,11 +289,6 @@ z-index:1;
     min-width:860px;
 }
 
-/* .gravestoneBarrier{
-    display:flex;
-    justify-content:space-evenly;
-} */
-
 .ghostContainer{
     position: absolute;
   /* display:flex; */
