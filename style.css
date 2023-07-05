@@ -28,7 +28,7 @@ border-radius:4px;
 
 .playerr{
     background-color: rgb(32, 31, 31);
-
+    
 }
 
 .statusBar{
@@ -375,18 +375,20 @@ display:none;
     
 }
 #grave1{
-    /* display:flex; */
+   display:flex;
     height:30%;
     margin-top:40%;
-    margin-right:70px;
-    
+    margin-left:-280px;
+    justify-content:end;
+    align-self:end;
     z-index:3;
+    
 }
 #grave2{
     display:flex;
-    height:100px;
+    height:160px;
     margin-top:40%;
-    margin-left:-280px;
+    margin-left:-320px;
     z-index:3;
 }
 #grave3{
@@ -402,13 +404,15 @@ display:none;
     margin-top:40%;
     z-index:3;
     /* margin-left:0px; */
+    margin-right:-20px
 }
 
 #grave5{
     display:flex;
     height:150px;
     margin-top:40%;
-    padding-right:-100px;
+    /* padding-right:-10px; */
+    margin-right:-40px;
     z-index:3;
 }
 
