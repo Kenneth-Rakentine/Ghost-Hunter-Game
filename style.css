@@ -633,6 +633,39 @@ display:none;
   }
 
 
+  .ratContainer{
+    display:flex;
+    flex-direction:column;
+    justify-content:start;
+    position:absolute;
+  margin-top:300px;
+  margin-left:800px;
+    flex-direction:row;
+    align-self:center;
+    /* border:solid yellow; */
+    z-index: 2;
+    width:50px;
+    height:70px;
+    background-size: cover; 
+    /* float:inline-start */
+    animation: ratMove linear 5s infinite;
+}
+
+@keyframes ratMove{
+0%{
+
+}
+83%{
+  /* transform: translatey(-10px); */
+}
+90%{
+ 
+}
+100%{
+    transform:translatex(-800px);
+}
+}
+
 .batContainer{
     display:none;
     flex-direction:column;
@@ -645,7 +678,7 @@ display:none;
     z-index: 3;
     width:50px;
     height:50px;
-    background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/413b218e-c8a6-4b50-936f-648da64cff63/df9oxp6-f692f418-7026-4d1e-b69b-68890e7f9b8b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQxM2IyMThlLWM4YTYtNGI1MC05MzZmLTY0OGRhNjRjZmY2M1wvZGY5b3hwNi1mNjkyZjQxOC03MDI2LTRkMWUtYjY5Yi02ODg5MGU3ZjliOGIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BOgUxZ9Hn-K0iKjMcA_laHU41HpiDL-7rKOfC-bzrxo&fbclid=IwAR012ZikapmrJusD7qhW1R9SiQTfA45nisvV52HXJK_jkv0l02qfyE5fzqM');
+    /* background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/413b218e-c8a6-4b50-936f-648da64cff63/df9oxp6-f692f418-7026-4d1e-b69b-68890e7f9b8b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQxM2IyMThlLWM4YTYtNGI1MC05MzZmLTY0OGRhNjRjZmY2M1wvZGY5b3hwNi1mNjkyZjQxOC03MDI2LTRkMWUtYjY5Yi02ODg5MGU3ZjliOGIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BOgUxZ9Hn-K0iKjMcA_laHU41HpiDL-7rKOfC-bzrxo&fbclid=IwAR012ZikapmrJusD7qhW1R9SiQTfA45nisvV52HXJK_jkv0l02qfyE5fzqM'); */
     background-size: cover; 
     /* float:inline-start */
     animation: batFly linear 7s infinite;

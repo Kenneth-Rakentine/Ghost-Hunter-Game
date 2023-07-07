@@ -76,10 +76,12 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 - [ ] Ammo gauge (per level?)
 - [ ] Cleaner Animations
 - [ ] More accurate tracking and execution of "ghost hit" animation
+- [x] Add new animated background elements/gifs per level
+      w/sound fx
 - [x] Display current level text on screen-status bar
 - [ ] Increase ghost retaliate/attk chance with each level
 - [x] Add autoplay sound effect functions
-- [ ] New ghost images per level
+- [x] New ghost images per level
 - [ ] Per Player Score/Additional "Vs" multiplayer mode
 - [x] Next Round indicator button animations
 

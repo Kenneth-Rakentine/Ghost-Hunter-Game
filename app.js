@@ -295,6 +295,7 @@ const Lvl2Button = ()=>{
 
 const Lvl3Button = ()=>{
   swapBkg2();
+  batSound();
   lvl3Bats();
   // ghostWind();
   lvlToScreen("LEVEL THREE");
@@ -310,6 +311,9 @@ const Lvl3Button = ()=>{
 
 const Lvl4Button = ()=>{
   swapBkg3();
+  silenceBatSound();
+  ratHide();
+  batHide();
   createBoss();
   lvlToScreen('BOSS LEVEL');
   hideGraves();
@@ -406,10 +410,37 @@ document.addEventListener('mousemove', function(event) {
 
 
 // bat container:
-const lvl3Bats = () => {
+const lvl3Bats = ()=>{
   let batContainer = document.getElementById('batContainer')
   batContainer.style.display = 'flex'
 }
+
+const batHide = ()=>{
+  batContainer = document.getElementById('batContainer')
+  batContainer.style.display = 'none'
+}
+
+const ratHide = ()=>{
+  ratContainer = document.getElementById('ratContainer')
+  ratContainer.style.display = 'none'
+}
+
+let batWings = new Audio('Music/Small Group of Bats Flying Around - QuickSounds.com.mp3')
+let batScreech = new Audio('Music/Bat Swarm - QuickSounds.com.mp3')
+const batSound = ()=>{
+  batWings.volume = .2
+  batWings.play()
+  batScreech.volume = .2
+  batScreech.play()
+}
+
+const silenceBatSound = () => {
+  batWings.pause()
+  batWings.currentTime = 0
+  batScreech.pause()
+  batScreech.currentTime = 0
+}
+
 
 // switch ghost images for level 3:
 
@@ -471,8 +502,6 @@ const ghostClick = (event) => {
     splat.volume = 0.4
     splat.play()
   }
-
- 
 
 
 //use setTimeOut to delay each ghost: 
