@@ -283,6 +283,8 @@ const startButton = ()=>{
 
 const Lvl2Button = ()=>{
   swapBkg();
+  lightningSound();
+  setTimeout(lightningDisplay, 1000);
   lvl2Scream();
   lvlToScreen("LEVEL TWO");
   initGhosts();
@@ -300,6 +302,7 @@ const Lvl3Button = ()=>{
   // ghostWind();
   lvlToScreen("LEVEL THREE");
   initGhosts();
+  lightningHide();
   lvl3ghost1();
   lvl3Ghost3();
   lvl3Ghost4();
@@ -441,12 +444,30 @@ const silenceBatSound = () => {
   batScreech.currentTime = 0
 }
 
+// lvl 2 lightning:
+
+const lightningSound = ()=>{
+  let lightning = new Audio('Music/Lightning08CloseG SIG012601_preview.mp3')
+  lightning.volume = .4;
+  lightning.play()
+
+}
+
+const lightningDisplay = ()=>{
+  lightningContainer = document.getElementById('lightningContainer')
+  lightningContainer.style.display = 'flex'
+}
+
+const lightningHide = ()=>{
+  lightningContainer = document.getElementById('lightningContainer')
+  lightningContainer.style.display = 'none'
+}
 
 // switch ghost images for level 3:
 
 const lvl3ghost1 = ()=>{
   let ghost1 = document.getElementById('ghost1')
-  ghost1.src = 'https://cdn.donmai.us/original/80/34/80345ce04adf86f093362a0d17d61bb6.gif?fbclid=IwAR306RX8MG1xaGtDNNeVXy-OBO-i2kTo06aq_mbtTKJFhg_UQ4RbjwKqcCk'
+  ghost1.src = 'https://cdna.artstation.com/p/assets/images/images/034/329/090/original/greg-dunne-chara-idle-1.gif?1612014163'
 }
 
 const lvl3Ghost3 = ()=>{
