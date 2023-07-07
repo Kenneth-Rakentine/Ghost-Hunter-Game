@@ -64,7 +64,9 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 -Javascript
 -CSS
 -HTML5
--Photoshop (for editing background images)
+-Photoshop (background image editing)
+-iZotope RX 10 (audio processing)
+
 ```
 
 #### Roadmap:
@@ -85,4 +87,4 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 
 ###### Unsolved/To Be Accomplished
 
-separate states per level/player, lightning gif overlay on boss level, individual remaining ghost attack function, ghost attack chance increases with time , more detailed ghost shaking once attacked "rotate" keyframe animations, more evasive maneuvers from ghosts once hovered over, separate point value for boss enemy , better foreground gravestone element sizing/placement, change .ghosts z-index to above gravestones, responsive screen resize/css flex ghostcontainer or individual ghost img elements to respond to page resize (and set game screen containers back to flexfrom "min/max-width")
+separate states per level/player, lightning gif overlay on boss level, individual remaining ghost attack function, ghost attack chance increases with time , more detailed ghost shaking once attacked "rotate" keyframe animations, more evasive maneuvers from ghosts once hovered over, separate point value for boss enemy , better foreground gravestone element sizing/placement, change .ghosts z-index to above gravestones, responsive screen resize/css flex ghostcontainer or individual ghost img elements to respond to page resize (and set game screen containers back to flex from "min/max-width")

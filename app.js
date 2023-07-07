@@ -33,7 +33,7 @@ window.onload = playAudio()
 
 function playAudio() {
   let audio = new Audio("Music/09 No Evidence.mp3");
-  audio.volume = 0.1
+  audio.volume = 0.4
   // audio.play();
 
 }
@@ -273,6 +273,7 @@ const createGhost = ()=>{
 const startButton = ()=>{
     // initGhosts();
     // hide2Ghosts();
+    ghostWind();
     lvlToScreen("LEVEL ONE");
     beginFloat();
     beginFloat2();
@@ -282,6 +283,7 @@ const startButton = ()=>{
 
 const Lvl2Button = ()=>{
   swapBkg();
+  lvl2Scream();
   lvlToScreen("LEVEL TWO");
   initGhosts();
   begin2Float();
@@ -292,6 +294,7 @@ const Lvl2Button = ()=>{
 
 const Lvl3Button = ()=>{
   swapBkg2();
+  ghostWind();
   lvlToScreen("LEVEL THREE");
   initGhosts();
   begin3Float();
@@ -318,7 +321,17 @@ const thunderSound = ()=>{
   storm.play()
 }
 
+const lvl2Scream = ()=>{
+  let scream = new Audio('Music/scream final.mp3')
+  scream.volume = .3
+  scream.play()
+}
 
+const ghostWind = ()=>{
+  let wind = new Audio('Music/Ghost Wind.mp3')
+  wind.volume = .1
+  wind.play()
+}
 
 //switch out background image per levels 2, 3, & 4 via "lvl_button"s:
 // level 2:
@@ -459,6 +472,7 @@ const resetButton = ()=>{
 }
 
 //Ghost (All 4) animation keyframe functions for startButton function:
+// [additionl ghosts are hidden via opacity keyframes in css for earlier levels, and shown in later levels]
 //LEVEL 1 ghost animations
 const beginFloat = ()=>{
     let ghostOneFloater = document.querySelector('#ghost1')
