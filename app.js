@@ -295,6 +295,7 @@ const Lvl2Button = ()=>{
 
 const Lvl3Button = ()=>{
   swapBkg2();
+  lvl3Bats();
   // ghostWind();
   lvlToScreen("LEVEL THREE");
   initGhosts();
@@ -403,6 +404,12 @@ document.addEventListener('mousemove', function(event) {
 
 //_________________________________________________________
 
+
+// bat container:
+const lvl3Bats = () => {
+  let batContainer = document.getElementById('batContainer')
+  batContainer.style.display = 'flex'
+}
 
 // switch ghost images for level 3:
 
