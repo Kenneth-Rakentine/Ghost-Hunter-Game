@@ -286,6 +286,7 @@ const Lvl2Button = ()=>{
   lvl2Scream();
   lvlToScreen("LEVEL TWO");
   initGhosts();
+  level2Ghost3();
   begin2Float();
   begin2Float2();
   begin2Float3();
@@ -418,6 +419,12 @@ const lvl3Ghost3 = ()=>{
 const lvl3Ghost4 = ()=>{
   let ghost4 = document.getElementById('ghost4')
   ghost4.src = 'https://4.bp.blogspot.com/-0VJMV2gwSYw/UmRX4vyOEgI/AAAAAAABm_A/imPDNsYZkNQ/s1600/HALLOWEEN+%252891%2529.gif?fbclid=IwAR3NTSHZrP7ud1EHnbd9h2jSLGFmp4ZcU_Ic0J9tCSQCUJCVu4Qpox-ITRs'
+}
+
+// switch out ghost3 img for level 2:
+const level2Ghost3 = ()=>{
+  let ghost3 = document.getElementById('ghost3')
+  ghost3.src = 'https://1.bp.blogspot.com/-40NlRDeqLmw/UmRX7lH-uPI/AAAAAAABm_8/nJOmdnyUvbI/s1600/HALLOWEEN+%252899%2529.gif?fbclid=IwAR3NTSHZrP7ud1EHnbd9h2jSLGFmp4ZcU_Ic0J9tCSQCUJCVu4Qpox-ITRs'
 }
 
 //on click, replace ghost with splat gif, remove old gif,remove splat gif after setTimeout:
