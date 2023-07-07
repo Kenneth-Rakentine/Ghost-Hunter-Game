@@ -32,21 +32,21 @@ Your browser does not support the audio element.
 window.onload = playAudio()
 
 function playAudio() {
-  let audio = new Audio("Music/09 No Evidence.mp3");
+  let audio = new Audio("Music/09 No Evidence.mp3")
   audio.volume = 0.4
-  // audio.play();
+  // audio.play()
 
 }
 
 //
 //Chance of Ghost Attack Random Generation:
 const generateRandomNum = (min, max)=>{
-  let rand = Math.floor(Math.random() * (max - min) + min);
-  return rand;
-};
+  let rand = Math.floor(Math.random() * (max - min) + min)
+  return rand
+}
 
 //player turn state:
-let isPlayerTwo = false;
+let isPlayerTwo = false
 
 //create score variable which adds points per every ghostHit/ghostClick:
 let score = 0;
@@ -54,7 +54,7 @@ const addPoints = (points) => {
   score += points
   updateScore(score)
   winScore()
-};
+}
 console.log(addPoints)
 const scoreDisplay = ()=>{
     console.log(score)
@@ -64,7 +64,7 @@ const addPoints2 = (points2) => {
   score2 += points2
   updateScore(score2)
   winScore()
-};
+}
 console.log(addPoints2)
 const scoreDisplay2 = ()=>{
     console.log(score2)
@@ -73,12 +73,12 @@ const scoreDisplay2 = ()=>{
 
 //print 'You Lose' to screen via 'ghostContainer':
 const youLose = (lostTxt)=>{
-  let textContainDiv = document.querySelector('.ghostContainer');
+  let textContainDiv = document.querySelector('.ghostContainer')
   let type = document.createElement('div')
   type.classList.add('loseTxtContainer')
-  type.innerHTML = lostTxt;
+  type.innerHTML = lostTxt
   textContainDiv.innerHTML = '';
-  textContainDiv.appendChild(type);
+  textContainDiv.appendChild(type)
 
 }
 
@@ -93,14 +93,14 @@ const youLose = (lostTxt)=>{
 
 //print 'You Win' to Screen via 'ghostContainer':
 const highScore = (winContent)=>{
-  let winScreen = document.querySelector('.ghostContainer');
-  let printer = document.createElement('div');
-  printer.classList.add('winTxtContainer');
+  let winScreen = document.querySelector('.ghostContainer')
+  let printer = document.createElement('div')
+  printer.classList.add('winTxtContainer')
   printer.innerHTML = winContent;
   
 
   winScreen.innerHTML = '';
-  winScreen.appendChild(printer);
+  winScreen.appendChild(printer)
 }
 
 //When score reaches 50, initiate WIN State:
@@ -140,7 +140,7 @@ const nextLvlOne = () => {
 }
 
 const nxtLvlTwo = () => {
-  let level2Button = document.querySelector('.level2Button');
+  let level2Button = document.querySelector('.level2Button')
   if (score === 10) {
     btnThrob(level2Button)
   }
@@ -160,7 +160,7 @@ const nxtLvlThree = () => {
 }
 
 const nxtLvlFour = () => {
-  let level4Button = document.querySelector('.level4Button');
+  let level4Button = document.querySelector('.level4Button')
   if (score === 45) {
     btnThrob(level4Button)
   }
@@ -181,19 +181,19 @@ const nxtLvlReset = () => {
 
 //update score variable eacb time addPoints is called: 
 const updateScore = (newScore) => {
-  score = newScore;
-  nextLvlOne();
-  nxtLvlTwo();
-  nxtLvlThree();
-  nxtLvlFour();
-  nxtLvlReset();
+  score = newScore
+  nextLvlOne()
+  nxtLvlTwo()
+  nxtLvlThree()
+  nxtLvlFour()
+  nxtLvlReset()
 }
 
-nextLvlOne();
-nxtLvlTwo();
-nxtLvlThree();
-nxtLvlFour();
-nxtLvlReset();
+nextLvlOne()
+nxtLvlTwo()
+nxtLvlThree()
+nxtLvlFour()
+nxtLvlReset()
 
 
 
@@ -220,10 +220,10 @@ const createGhost = ()=>{
 
     ghostContainer.appendChild(ghostImage)
     
-    ghostContainer.style.display = 'flex';
+    ghostContainer.style.display = 'flex'
   }
   
-  setTimeout(createGhost, 1418);
+  setTimeout(createGhost, 1418)
 
 
 
@@ -236,106 +236,97 @@ const createGhost = ()=>{
     const ghost1 = document.getElementById('ghost1')
     ghost1.src = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cf2a2628-6126-4767-9684-0b5f75a06612/dd546ex-d5116361-3d5c-4aaa-8eb2-162626f7137f.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmMmEyNjI4LTYxMjYtNDc2Ny05Njg0LTBiNWY3NWEwNjYxMlwvZGQ1NDZleC1kNTExNjM2MS0zZDVjLTRhYWEtOGViMi0xNjI2MjZmNzEzN2YuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ZYXqmKSpAzXuJUt0afhaAk6hISURCxcFkDTwjHq4CWo';
     ghost1.style.display = 'flex';
-  };
+  }
 
     // hides gravestone img elements
     const hideGraves = () => {
-      let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5'];
+      let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5']
     
       for (let i = 0; i < graveIds.length; i++) {
-        const element = document.querySelector(graveIds[i]);
+        const element = document.querySelector(graveIds[i])
         if (element) {
-          element.setAttribute('src', 'https://pngimg.com/d/dot_PNG22.png');
+          element.setAttribute('src', 'https://pngimg.com/d/dot_PNG22.png')
         }
       }
       //fix "firstPerson" class margin-top to adjust the screen positioning after removinng foreground elements:
       let bottomMargin = document.querySelector('.firstPerson')
       if (bottomMargin) {
-        bottomMargin.style.marginTop = '-114px';
+        bottomMargin.style.marginTop = '-114px'
       }
-    };
+    }
   
     //hides graves on Game Over Screen for "you lose" txt without lack dot img to fit screen sizing issues for the 1st hideGraves function:
     const hideGraves2 = () => {
-      let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5'];
+      let graveIds = ['#grave1', '#grave2', '#grave4', '#grave5']
     
       for (let i = 0; i < graveIds.length; i++) {
         const element = document.querySelector(graveIds[i]);
         if (element) {
-          element.setAttribute('src', '');
+          element.setAttribute('src', '')
         }
       }
      
-    };
+    }
   
   
 
 const startButton = ()=>{
-    // initGhosts();
-    // hide2Ghosts();
-    ghostWind();
-    lvlToScreen("LEVEL ONE");
-    beginFloat();
-    beginFloat2();
-    beginFloat3();
-    beginFloat4();
+    // initGhosts()
+    // hide2Ghosts()
+    ghostWind()
+    lvlToScreen("LEVEL ONE")
+    beginFloat()
+    beginFloat2()
+    beginFloat3()
+    beginFloat4()
 }
 
 const Lvl2Button = ()=>{
-  swapBkg();
-  lightningSound();
-  setTimeout(lightningDisplay, 1000);
-  lvl2Scream();
-  lvlToScreen("LEVEL TWO");
-  initGhosts();
-  level2Ghost3();
-  begin2Float();
-  begin2Float2();
-  begin2Float3();
-  begin2Float4();
+  swapBkg()
+  lightningSound()
+  setTimeout(lightningDisplay, 1000)
+  lvl2Scream()
+  lvlToScreen("LEVEL TWO")
+  initGhosts()
+  level2Ghost3()
+  begin2Float()
+  begin2Float2()
+  begin2Float3()
+  begin2Float4()
 }
 
 const Lvl3Button = ()=>{
-  swapBkg2();
-  batSound();
-  lvl3Bats();
-  // ghostWind();
-  lvlToScreen("LEVEL THREE");
-  initGhosts();
-  lightningHide();
-  lvl3ghost1();
-  lvl3Ghost3();
-  lvl3Ghost4();
-  begin3Float();
-  begin3Float2();
-  begin3Float3();
-  begin3Float4();
+  swapBkg2()
+  batSound()
+  lvl3Bats()
+  // ghostWind()
+  lvlToScreen("LEVEL THREE")
+  initGhosts()
+  lightningHide()
+  lvl3ghost1()
+  lvl3Ghost3()
+  lvl3Ghost4()
+  begin3Float()
+  begin3Float2()
+  begin3Float3()
+  begin3Float4()
 }
 
 const Lvl4Button = ()=>{
-  swapBkg3();
-  silenceBatSound();
-  ratHide();
-  batHide();
-  createBoss();
-  lvlToScreen('BOSS LEVEL');
-  hideGraves();
-  thunderSound();
-  begin4Float();
-  // begin4Float2();
-  // begin4Float3();
-  // begin4Float4();
+  swapBkg3()
+  silenceBatSound()
+  ratHide()
+  batHide()
+  createBoss()
+  lvlToScreen('BOSS LEVEL')
+  hideGraves()
+  thunderSound()
+  begin4Float()
+  // begin4Float2()
+  // begin4Float3()
+  // begin4Float4()
 }
 
-
-// Healt Meter:
-// let health = 100
-
-// const healthToScreen = (health)=>{
-//   let screen = document.querySelector('.healthBar')
-//   screen.innerHTML = `${health}`
-// }
-// healthToScreen(health)
 
 const thunderSound = ()=>{
   let storm = new Audio('Music/8d82b5_Thunderstorm_Sound_Effect.mp3')
@@ -358,36 +349,36 @@ const ghostWind = ()=>{
 //switch out background image per levels 2, 3, & 4 via "lvl_button"s:
 // level 2:
 const swapBkg = ()=>{
-  let graveBkg = document.querySelector('.graveyard');
+  let graveBkg = document.querySelector('.graveyard')
     graveBkg.setAttribute('src', 'https://i.ibb.co/m0GvLqf/Ghost-Hunter-background-Image-TWO.jpg')
-};
+}
 
 // level 3:
 const swapBkg2 = ()=>{
-  let graveBkg = document.querySelector('.graveyard');
+  let graveBkg = document.querySelector('.graveyard')
     graveBkg.setAttribute('src', 'https://i.ibb.co/S5qspZR/Ghost-Hunter-background-Image-FOUR.jpg')
-};
+}
 
 // level 4:
 const swapBkg3 = ()=>{
-  let graveBkg = document.querySelector('.graveyard');
+  let graveBkg = document.querySelector('.graveyard')
     graveBkg.setAttribute('src', 'https://media.tenor.com/AXYSMOzS4RUAAAAC/graveyard-grim.gif')
-  ;
   
-};
+  
+}
 
 
 
 
 const currentPlayerTwo = ()=>{
-  isPlayerTwo = !isPlayerTwo;
-  console.clear();
+  isPlayerTwo = !isPlayerTwo
+  console.clear()
   
 }
 
 const currentPlayerOne = ()=>{
-  isPlayerTwo = false;
-  console.clear();
+  isPlayerTwo = false
+  console.clear()
   
 }
 
@@ -395,15 +386,15 @@ const currentPlayerOne = ()=>{
 //each successful hit is +5 points added to the Score, consoleToScreen prints current score to statusBar:
 const ghostHit = () => {
   if (isPlayerTwo) {
-    addPoints(5);
+    addPoints(5)
     console.log("+5 Points!");
     consoleToScreen(`PLAYER 2 SCORE: ${score}`)
-    ghostChanceAttack();  
+    ghostChanceAttack()
   } else {
-  addPoints(5);
-  console.log("+5 Points!");
+  addPoints(5)
+  console.log("+5 Points!")
   consoleToScreen(`PLAYER 1 SCORE: ${score}`)
-  ghostChanceAttack();  
+  ghostChanceAttack()
   }
 };
 
@@ -412,9 +403,9 @@ const ghostHit = () => {
 
 document.addEventListener('mousemove', function(event) {
   if (isPlayerTwo) {
-    document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=509), auto';
+    document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=509), auto'
   } else {
-    document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=517), auto';
+    document.body.style.cursor = 'url(http://www.rw-designer.com/cursor-extern.php?id=517), auto'
   }
 });
 
@@ -458,7 +449,7 @@ const silenceBatSound = () => {
 
 const lightningSound = ()=>{
   let lightning = new Audio('Music/Lightning08CloseG SIG012601_preview.mp3')
-  lightning.volume = .4;
+  lightning.volume = .4
   lightning.play()
 
 }
@@ -498,33 +489,32 @@ const level2Ghost3 = ()=>{
 
 //on click, replace ghost with splat gif, remove old gif,remove splat gif after setTimeout:
 const ghostClick = (event) => {
-    const clickedGhost = event.target;
-    const oldSrc = clickedGhost.src;
-    const splashImg = 'https://media.baamboozle.com/uploads/images/848417/1659679771_127028_gif-url.gif'; 
+    const clickedGhost = event.target
+    const oldSrc = clickedGhost.src
+    const splashImg = 'https://media.baamboozle.com/uploads/images/848417/1659679771_127028_gif-url.gif'
   
-    clickedGhost.style.display = 'none';
+    clickedGhost.style.display = 'none'
 
-    const shotGif = document.createElement('img');
+    const shotGif = document.createElement('img')
     shotGif.src = splashImg;
 
-    clickedGhost.parentNode.insertBefore(shotGif, clickedGhost.nextSibling);
+    clickedGhost.parentNode.insertBefore(shotGif, clickedGhost.nextSibling)
   
-    playGunshot(); 
-    setTimeout(splatterSound, 90);
+    playGunshot()
+    setTimeout(splatterSound, 90)
     
 
     setTimeout(() => {
       shotGif.parentNode.removeChild(shotGif);
-      clickedGhost.style.display = 'none';  
-      ghostHit();
-      console.log('ghost clicked');
-    }, 400);
-
-  };
+      clickedGhost.style.display = 'none'
+      ghostHit()
+      console.log('ghost clicked')
+    }, 400)
+  }
 
   const playGunshot =()=>{
     let akmp3 = new Audio('Music/Ak47GunShotSilenc PE1098301_preview.mp3')
-    akmp3.volume = 0.3;
+    akmp3.volume = 0.3
     akmp3.play()
   }
 
@@ -538,16 +528,16 @@ const ghostClick = (event) => {
 //use setTimeOut to delay each ghost: 
 const ghostAppearDelay = 1500;
 const initGhosts = () => {
-  const ghosts = document.querySelectorAll(".ghosts");
-  let delay = 1000;
+  const ghosts = document.querySelectorAll(".ghosts")
+  let delay = 1000
   
   ghosts.forEach((ghost, ghostList) => {
     setTimeout(() => {
-      ghost.style.display = "block";
+      ghost.style.display = "block"
       ghost.addEventListener("click", ghostClick);
-    }, delay);
+    }, delay)
     
-    delay += ghostAppearDelay;
+    delay += ghostAppearDelay
   });
 };
 
@@ -556,14 +546,14 @@ window.addEventListener("load", initGhosts);
 
 //display gameTitle on page load:
 window.addEventListener("load", ()=>{
-  gameTitle("Ghost Hunter");
+  gameTitle("Ghost Hunter")
 });
 
 
 
 //reset Button reloads screen:
 const resetButton = ()=>{
-    location.reload();
+    location.reload()
 }
 
 //Ghost (All 4) animation keyframe functions for startButton function:
@@ -667,7 +657,7 @@ const ghostAttack4 = ()=>{
 const GameOver = () => {
   // Create a new image element for the game over screen
   let gameScreen = document.querySelector('.graveyard')
-  gameScreen.setAttribute('src', 'https://pa1.aminoapps.com/7076/a912ff623fb056551339d87bec6b728c27d2c179r1-500-375_hq.gif');
+  gameScreen.setAttribute('src', 'https://pa1.aminoapps.com/7076/a912ff623fb056551339d87bec6b728c27d2c179r1-500-375_hq.gif')
 }
 
 //display game title txt temporarily on reload:
@@ -676,14 +666,13 @@ const GameOver = () => {
 
   //"reload?" prompt:
 const reloadGame = ()=>{
-  let startOver = window.prompt("GAME OVER", "Reload?", "Purgatory");
+  let startOver = window.prompt("GAME OVER", "Reload?", "Purgatory")
   if (startOver === "Reload?"){
-    location.reload();
+    location.reload()
   }
 };
 
-// _________________________________
-//Added health bar whih depletes with ghostChanceAttack up to 3 attacks before depleting, which triggers GameOver function:
+
 
 // _______________________________
 
@@ -692,7 +681,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
   //set to 18/20 or 34/40 or 89/100 or 480/500 when finished:
-  if (randomChance > 480){
+  if (randomChance > 200){
     // ghostAttackIndex();
     ghostAttack()
     ghostAttack2()
@@ -712,8 +701,8 @@ const ghostChanceAttack = ()=>{
 }
 
 const attackSound = ()=>{
-  let metalShriek = new Audio('Music/free-sound-1675031263.mp3')
-  metalShriek.volume = 0.6
+  let metalShriek = new Audio('Music/Horror M 7-7-23 Ghost Hunter 3.mp3')
+  metalShriek.volume = 1
   metalShriek.play()
 }
 
@@ -723,33 +712,32 @@ const attackSound = ()=>{
 const ghstAttkToScreen = (attackTxt)=>{
   let lowBar = document.querySelector('.attackTxt')
   let showAtk = document.createElement('div')
-  showAtk.classList.add('ghostAttackPrinter');
-  showAtk.innerHTML = attackTxt;
-  lowBar.innerHTML = '';
-  lowBar.appendChild(showAtk);
+  showAtk.classList.add('ghostAttackPrinter')
+  showAtk.innerHTML = attackTxt
+  lowBar.innerHTML = ''
+  lowBar.appendChild(showAtk)
 }
 //Print current level txt to footer-bar:
 const lvlToScreen = (currentLvlDisp)=>{
   let footerDiv = document.querySelector('.attackTxt')
   let showLvl = document.createElement('div')
-  showLvl.classList.add('levelPrinter');
-  showLvl.innerHTML = currentLvlDisp;
-  footerDiv.innerHTML = '';
-  footerDiv.appendChild(showLvl);
+  showLvl.classList.add('levelPrinter')
+  showLvl.innerHTML = currentLvlDisp
+  footerDiv.innerHTML = ''
+  footerDiv.appendChild(showLvl)
 }
 
 
  //display game title on page load:
 const gameTitle = (title) =>{
-  let gamescreen2 = document.querySelector('.ghostContainer');
-  let titleText = document.createElement('div');
+  let gamescreen2 = document.querySelector('.ghostContainer')
+  let titleText = document.createElement('div')
   titleText.classList.add('gameTitleTxt')
   titleText.innerHTML = title;
-  gamescreen2.appendChild(titleText);
-  //disappear after 4 seconds:
+  gamescreen2.appendChild(titleText)
   setTimeout(() => {
-    titleText.remove();
-  }, 4000);
+    titleText.remove()
+  }, 3800);
 }
 
 

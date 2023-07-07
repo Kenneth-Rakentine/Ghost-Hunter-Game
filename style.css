@@ -6,26 +6,6 @@ a {cursor: url('https://raw.githubusercontent.com/coob113/fancy-cursors/master/t
 
 /* @media (max-width: 892px){ */
 
-.healthBar {
- display:flex;
-justify-content:end;
-align-self:center;
-flex-direction: row-reverse;
-margin-left:80px;
-font-weight:bold;
- font-size:18px;
- color:rgb(94, 139, 87);
- font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- text-shadow: 1px 1px 2px rgb(8, 49, 29);
- letter-spacing:.8px;
- background-color:rgb(104, 105, 103);
- border-radius: 4px;
- box-shadow: inset 2.4px 2.9px 4px rgb(58, 59, 58);
-}
-      
-      
-     
-
 .topper{
 display:flex;
 background-color: rgb(32, 31, 31);
@@ -462,6 +442,7 @@ display:none;
 
 /* __________________ */
 
+
 .gameTitleTxt{
     display:block;
     justify-content:center;
@@ -478,15 +459,30 @@ display:none;
     z-index:2;
     opacity:1;
     transition:3.4s;
-    animation-name: titleColor;
-    animation-duration: 3.8s;
+    animation: titleColor 3.7s, titlSshake .3s ;
 }
 @keyframes titleColor {
     from {color: rgb(85, 39, 87); opacity: .3;}
     to {color: rgb(62, 148, 83); opacity: 1;}
   }
 
+@keyframes titlSshake{
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
 
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+  }
 /* __________________ */
 
 
