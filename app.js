@@ -103,9 +103,9 @@ const highScore = (winContent)=>{
   winScreen.appendChild(printer);
 }
 
-//When score reaches 55, initiate WIN State:
+//When score reaches 50, initiate WIN State:
 const winScore = () => {
-  if (score >= 55) {
+  if (score >= 50) {
     setTimeout(() => {
       highScore("YOU WIN");
     }, 300); 
@@ -326,6 +326,16 @@ const Lvl4Button = ()=>{
   // begin4Float3();
   // begin4Float4();
 }
+
+
+// Healt Meter:
+// let health = 100
+
+// const healthToScreen = (health)=>{
+//   let screen = document.querySelector('.healthBar')
+//   screen.innerHTML = `${health}`
+// }
+// healthToScreen(health)
 
 const thunderSound = ()=>{
   let storm = new Audio('Music/8d82b5_Thunderstorm_Sound_Effect.mp3')
@@ -681,23 +691,24 @@ const reloadGame = ()=>{
 //setup a math.random chance that "ghostAttack" function will initialize during roundTwo function sequence where if the random outcome is higher than 50%. the ghost reaches full "scale" in its newly created keyframe [and glassScreenBreak gif image appears?], in which case player 1 or 2 dies:
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
-  //set to 18/20 or 34/40 or 89/100 or 446/500 when finished:
+  //set to 18/20 or 34/40 or 89/100 or 480/500 when finished:
   if (randomChance > 480){
     // ghostAttackIndex();
-    ghostAttack();
-    ghostAttack2();
-    ghostAttack3();
-    ghostAttack4();
-    attackSound();
-    ghstAttkToScreen("GHOST ATTACK!");
-    console.log("Ghost Attacked!");
-    hideGraves2();
+    ghostAttack()
+    ghostAttack2()
+    ghostAttack3()
+    ghostAttack4()
+    attackSound()
+    ghstAttkToScreen("GHOST ATTACK!")
+    console.log("Ghost Attacked!")
+    hideGraves2()
     setTimeout(()=>{
-      youLose("YOU LOSE");
-    }, 1500);
-    setTimeout(GameOver, 1300);
-    setTimeout(reloadGame, 2100);
+      youLose("YOU LOSE")
+    }, 1500)
+    setTimeout(GameOver, 1300)
+    setTimeout(reloadGame, 2100)
   }
+
 }
 
 const attackSound = ()=>{
