@@ -294,9 +294,12 @@ const Lvl2Button = ()=>{
 
 const Lvl3Button = ()=>{
   swapBkg2();
-  ghostWind();
+  // ghostWind();
   lvlToScreen("LEVEL THREE");
   initGhosts();
+  lvl3ghost1();
+  lvl3Ghost3();
+  lvl3Ghost4();
   begin3Float();
   begin3Float2();
   begin3Float3();
@@ -398,6 +401,24 @@ document.addEventListener('mousemove', function(event) {
 
 
 //_________________________________________________________
+
+
+// switch ghost images for level 3:
+
+const lvl3ghost1 = ()=>{
+  let ghost1 = document.getElementById('ghost1')
+  ghost1.src = 'https://cdn.donmai.us/original/80/34/80345ce04adf86f093362a0d17d61bb6.gif?fbclid=IwAR306RX8MG1xaGtDNNeVXy-OBO-i2kTo06aq_mbtTKJFhg_UQ4RbjwKqcCk'
+}
+
+const lvl3Ghost3 = ()=>{
+  let ghost3 = document.getElementById('ghost3')
+  ghost3.src = 'https://cdn.gamedevmarket.net/wp-content/uploads/20191203195707/80446f3cd96a9d047e5bdba233c1c82f83f69d29.gif?fbclid=IwAR0KAHjNZYauSn1XGCWhDrelk9iajhkFfmAY7ZbdE-rvHMrhyV6QjHsMAE0';
+}
+
+const lvl3Ghost4 = ()=>{
+  let ghost4 = document.getElementById('ghost4')
+  ghost4.src = 'https://4.bp.blogspot.com/-0VJMV2gwSYw/UmRX4vyOEgI/AAAAAAABm_A/imPDNsYZkNQ/s1600/HALLOWEEN+%252891%2529.gif?fbclid=IwAR3NTSHZrP7ud1EHnbd9h2jSLGFmp4ZcU_Ic0J9tCSQCUJCVu4Qpox-ITRs'
+}
 
 //on click, replace ghost with splat gif, remove old gif,remove splat gif after setTimeout:
 const ghostClick = (event) => {
