@@ -31,6 +31,10 @@ The boss arrives in level four and is the final battle. Ghosts enemies can also 
 
 This is a Two-player game. To switch players, select the "Player One" or "Player Two" button at the bottom of the screen. Player 1 is green and Player 2 is red. Ghost Hunter is a co-op game, which means that each player's scores are summed to reach a single ultimate goal and win the game after all enemies are destroyed. Your total score is calculated at the right side of the top status bar.
 
+###### Note:
+
+_<sub>Github Pages hosted link not properly displaying target cursors or playing all audio correctly</sub>_
+
 ### Motivation
 
 ---
