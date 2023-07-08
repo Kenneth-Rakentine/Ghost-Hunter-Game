@@ -73,8 +73,11 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 
 - [ ] Health Bar - depletes with each atack, triggers game over state
 - [x] Title Sequence
+- [x] Fix window resize shifting ghosts
 - [ ] Ammo gauge (per level?)
 - [ ] Cleaner Animations
+- [x] Lightning gif overlay on round 2
+- [x] Better foreground gravestone element sizing/placement
 - [ ] More accurate tracking and execution of "ghost hit" animation
 - [x] Add new animated background elements/gifs per level
       w/sound fx
@@ -89,4 +92,4 @@ Per Scholas Week 7 Project Assignment: **"The DOM Based Game"**
 
 ###### Unsolved/To Be Accomplished
 
-separate states per level/player, lightning gif overlay on boss level, individual remaining ghost attack function, ghost attack chance increases with time , more detailed ghost shaking once attacked "rotate" keyframe animations, more evasive maneuvers from ghosts once hovered over, separate point value for boss enemy , better foreground gravestone element sizing/placement, change .ghosts z-index to above gravestones, responsive screen resize/css flex ghostcontainer or individual ghost img elements to respond to page resize (and set game screen containers back to flex from "min/max-width")
+separate states per level/player, individual remaining ghost attack function, ghost attack chance increases with time , more detailed ghost shaking once attacked "rotate" keyframe animations, more evasive maneuvers from ghosts once hovered over, separate point value for boss enemy, better responsive screen resize/css flex ghostcontainer

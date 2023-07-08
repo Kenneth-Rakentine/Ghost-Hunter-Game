@@ -34,7 +34,7 @@ window.onload = playAudio()
 function playAudio() {
   let audio = new Audio("Music/09 No Evidence.mp3")
   audio.volume = 0.4
-  // audio.play()
+  audio.play()
 
 }
 
@@ -681,7 +681,7 @@ const reloadGame = ()=>{
 const ghostChanceAttack = ()=>{
   let randomChance = (generateRandomNum(0, 500));
   //set to 18/20 or 34/40 or 89/100 or 480/500 when finished:
-  if (randomChance > 480){
+  if (randomChance > 470){
     // ghostAttackIndex();
     ghostAttack()
     ghostAttack2()
@@ -701,7 +701,7 @@ const ghostChanceAttack = ()=>{
 }
 
 const attackSound = ()=>{
-  let metalShriek = new Audio('Music/Horror M 7-7-23 Ghost Hunter 3.mp3')
+  let metalShriek = new Audio('Music/free-sound-1675031263.mp3')
   metalShriek.volume = 1
   metalShriek.play()
 }
